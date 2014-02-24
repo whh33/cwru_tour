@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+
+@property (strong, nonatomic) IBOutlet UIButton *buildingButton;
+@property (strong, nonatomic) IBOutlet UIButton *tourButton;
+@property (strong, nonatomic) IBOutlet UIButton *moreOptionsButton;
+@property (strong, nonatomic) IBOutlet UIButton *signUpButton;
+
 @end
