@@ -21,6 +21,7 @@
 		651D672C18B925F20017A465 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D670E18B925F20017A465 /* UIKit.framework */; };
 		651D673418B925F20017A465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 651D673218B925F20017A465 /* InfoPlist.strings */; };
 		651D673618B925F20017A465 /* cwru_tourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D673518B925F20017A465 /* cwru_tourTests.m */; };
+		651D674118BA70800017A465 /* BuildingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D674018BA70800017A465 /* BuildingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		651D673118B925F20017A465 /* cwru_tourTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cwru_tourTests-Info.plist"; sourceTree = "<group>"; };
 		651D673318B925F20017A465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		651D673518B925F20017A465 /* cwru_tourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cwru_tourTests.m; sourceTree = "<group>"; };
+		651D673F18BA70800017A465 /* BuildingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingsViewController.h; sourceTree = "<group>"; };
+		651D674018BA70800017A465 /* BuildingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				651D671918B925F20017A465 /* AppDelegate.h */,
 				651D671A18B925F20017A465 /* AppDelegate.m */,
 				651D671C18B925F20017A465 /* Main.storyboard */,
+				651D673F18BA70800017A465 /* BuildingsViewController.h */,
+				651D674018BA70800017A465 /* BuildingsViewController.m */,
 				651D671F18B925F20017A465 /* ViewController.h */,
 				651D672018B925F20017A465 /* ViewController.m */,
 				651D672218B925F20017A465 /* Images.xcassets */,
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651D674118BA70800017A465 /* BuildingsViewController.m in Sources */,
 				651D672118B925F20017A465 /* ViewController.m in Sources */,
 				651D671B18B925F20017A465 /* AppDelegate.m in Sources */,
 				651D671718B925F20017A465 /* main.m in Sources */,
