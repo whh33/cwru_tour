@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="lHJ-tB-BuA">
+            <objects>
+                <viewController id="MY2-pV-h2U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T6c-Zq-0wk"/>
+                        <viewControllerLayoutGuide type="bottom" id="o9e-aq-gAY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S2a-or-BaD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gvh-Js-XwK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-zK-JDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1561" y="-364"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -29,11 +48,17 @@
                                 <state key="normal" title="Tours">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hTP-zd-uRQ" kind="push" id="ZeK-Wd-f1x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-Px-aEI">
                                 <rect key="frame" x="179" y="39" width="141" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Buildings"/>
+                                <connections>
+                                    <segue destination="IZf-39-MoF" kind="push" id="xOS-bI-K8O"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-gj-pfl">
                                 <rect key="frame" x="0.0" y="287" width="171" height="281"/>
@@ -41,6 +66,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="MY2-pV-h2U" kind="push" id="FDY-F3-hm8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-Ne-Gfs">
                                 <rect key="frame" x="179" y="287" width="141" height="281"/>
@@ -61,7 +89,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143" y="-664"/>
+            <point key="canvasLocation" x="-963" y="-604"/>
+        </scene>
+        <!--Tour View Controller-->
+        <scene sceneID="FrW-oZ-8DN">
+            <objects>
+                <viewController id="hTP-zd-uRQ" customClass="TourViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jKN-5U-MBj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tu2-p2-6eF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d4X-f2-syM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hv1-oK-huH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HW-D5-x5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="-1215"/>
         </scene>
         <!--Buildings View Controller-->
         <scene sceneID="CEB-xq-ArG">
@@ -86,10 +133,11 @@
                             <outlet property="delegate" destination="IZf-39-MoF" id="BPL-Tv-TXR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="0yp-tK-fZ3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-ee-N67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="-664"/>
+            <point key="canvasLocation" x="-185" y="316"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

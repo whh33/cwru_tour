@@ -22,6 +22,8 @@
 		651D673418B925F20017A465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 651D673218B925F20017A465 /* InfoPlist.strings */; };
 		651D673618B925F20017A465 /* cwru_tourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D673518B925F20017A465 /* cwru_tourTests.m */; };
 		651D674118BA70800017A465 /* BuildingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D674018BA70800017A465 /* BuildingsViewController.m */; };
+		6570269118C15C8200B3E41D /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269018C15C8200B3E41D /* TourViewController.m */; };
+		6570269418C1601300B3E41D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269318C1601300B3E41D /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		651D673518B925F20017A465 /* cwru_tourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cwru_tourTests.m; sourceTree = "<group>"; };
 		651D673F18BA70800017A465 /* BuildingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingsViewController.h; sourceTree = "<group>"; };
 		651D674018BA70800017A465 /* BuildingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingsViewController.m; sourceTree = "<group>"; };
+		6570268F18C15C8200B3E41D /* TourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourViewController.h; sourceTree = "<group>"; };
+		6570269018C15C8200B3E41D /* TourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourViewController.m; sourceTree = "<group>"; };
+		6570269218C1601300B3E41D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6570269318C1601300B3E41D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +121,10 @@
 		651D671018B925F20017A465 /* cwru_tour */ = {
 			isa = PBXGroup;
 			children = (
+				6570268E18C1518300B3E41D /* Second Tier */,
 				651D671918B925F20017A465 /* AppDelegate.h */,
 				651D671A18B925F20017A465 /* AppDelegate.m */,
 				651D671C18B925F20017A465 /* Main.storyboard */,
-				651D673F18BA70800017A465 /* BuildingsViewController.h */,
-				651D674018BA70800017A465 /* BuildingsViewController.m */,
 				651D671F18B925F20017A465 /* ViewController.h */,
 				651D672018B925F20017A465 /* ViewController.m */,
 				651D672218B925F20017A465 /* Images.xcassets */,
@@ -155,6 +160,19 @@
 				651D673218B925F20017A465 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6570268E18C1518300B3E41D /* Second Tier */ = {
+			isa = PBXGroup;
+			children = (
+				651D673F18BA70800017A465 /* BuildingsViewController.h */,
+				651D674018BA70800017A465 /* BuildingsViewController.m */,
+				6570268F18C15C8200B3E41D /* TourViewController.h */,
+				6570269018C15C8200B3E41D /* TourViewController.m */,
+				6570269218C1601300B3E41D /* SignUpViewController.h */,
+				6570269318C1601300B3E41D /* SignUpViewController.m */,
+			);
+			name = "Second Tier";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +274,10 @@
 			files = (
 				651D674118BA70800017A465 /* BuildingsViewController.m in Sources */,
 				651D672118B925F20017A465 /* ViewController.m in Sources */,
+				6570269418C1601300B3E41D /* SignUpViewController.m in Sources */,
 				651D671B18B925F20017A465 /* AppDelegate.m in Sources */,
 				651D671718B925F20017A465 /* main.m in Sources */,
+				6570269118C15C8200B3E41D /* TourViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +486,7 @@
 				651D673B18B925F20017A465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		651D673C18B925F20017A465 /* Build configuration list for PBXNativeTarget "cwru_tourTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +495,7 @@
 				651D673E18B925F20017A465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
