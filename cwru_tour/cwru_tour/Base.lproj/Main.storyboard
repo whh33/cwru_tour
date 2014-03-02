@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--General Info View Conroller-->
         <scene sceneID="lHJ-tB-BuA">
             <objects>
-                <viewController id="MY2-pV-h2U" sceneMemberID="viewController">
+                <viewController id="MY2-pV-h2U" customClass="General_InfoViewConroller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T6c-Zq-0wk"/>
                         <viewControllerLayoutGuide type="bottom" id="o9e-aq-gAY"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-zK-JDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1561" y="-364"/>
+            <point key="canvasLocation" x="-593" y="-710"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -35,16 +35,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="college-photo_8808..jpg" translatesAutoresizingMaskIntoConstraints="NO" id="swi-Lb-dCJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-YJ-UYw">
                                 <rect key="frame" x="0.0" y="-5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="kw0-pa-GRV"/>
+                                    <navigationItem title="Case Western Reserve University" id="kw0-pa-GRV"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-gV-dq3">
                                 <rect key="frame" x="0.0" y="39" width="171" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Tours">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,6 +60,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-Px-aEI">
                                 <rect key="frame" x="179" y="39" width="141" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Buildings"/>
                                 <connections>
                                     <segue destination="IZf-39-MoF" kind="push" id="xOS-bI-K8O"/>
@@ -63,24 +69,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-gj-pfl">
                                 <rect key="frame" x="0.0" y="287" width="171" height="281"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up">
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="General Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MY2-pV-h2U" kind="push" id="FDY-F3-hm8"/>
+                                    <segue destination="MY2-pV-h2U" kind="push" id="vjF-33-YNB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-Ne-Gfs">
                                 <rect key="frame" x="179" y="287" width="141" height="281"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="More">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="More"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="BackgroundView" destination="swi-Lb-dCJ" id="cL0-Vx-FPX"/>
                         <outlet property="buildingButton" destination="xjK-Px-aEI" id="AgE-zf-CFG"/>
                         <outlet property="moreOptionsButton" destination="c4L-Ne-Gfs" id="Xp0-or-LzR"/>
                         <outlet property="signUpButton" destination="Zcf-gj-pfl" id="al7-Q9-GIV"/>
@@ -89,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-963" y="-604"/>
+            <point key="canvasLocation" x="-1343" y="-750"/>
         </scene>
         <!--Tour View Controller-->
         <scene sceneID="FrW-oZ-8DN">
@@ -108,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HW-D5-x5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="-1215"/>
+            <point key="canvasLocation" x="-610" y="-1383"/>
         </scene>
         <!--Buildings View Controller-->
         <scene sceneID="CEB-xq-ArG">
@@ -137,9 +144,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-ee-N67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-185" y="316"/>
+            <point key="canvasLocation" x="-539" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="college-photo_8808..jpg" width="500" height="500"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
-#import "SignUpViewController.h"
+#import "General_InfoViewController.h"
 
-@interface SignUpViewController ()
+@interface General_InfoViewController ()
 
 @end
 
-@implementation SignUpViewController
+@implementation General_InfoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

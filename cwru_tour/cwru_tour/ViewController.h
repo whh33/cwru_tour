@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *tourButton;
 @property (strong, nonatomic) IBOutlet UIButton *moreOptionsButton;
 @property (strong, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIImageView *BackgroundView;
 
 @end
