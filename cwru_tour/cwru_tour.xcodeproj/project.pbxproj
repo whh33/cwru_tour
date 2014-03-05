@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC2783518C78075000F956A /* BuildingDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2783318C78075000F956A /* BuildingDatabase.xcdatamodeld */; };
 		651D670B18B925F20017A465 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D670A18B925F20017A465 /* Foundation.framework */; };
 		651D670D18B925F20017A465 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D670C18B925F20017A465 /* CoreGraphics.framework */; };
 		651D670F18B925F20017A465 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651D670E18B925F20017A465 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EC2783418C78075000F956A /* BuildingDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuildingDatabase.xcdatamodel; sourceTree = "<group>"; };
 		651D670718B925F20017A465 /* cwru_tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cwru_tour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651D670A18B925F20017A465 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		651D670C18B925F20017A465 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 				651D671918B925F20017A465 /* AppDelegate.h */,
 				651D671A18B925F20017A465 /* AppDelegate.m */,
 				651D671C18B925F20017A465 /* Main.storyboard */,
+				2EC2783318C78075000F956A /* BuildingDatabase.xcdatamodeld */,
 				651D671F18B925F20017A465 /* ViewController.h */,
 				651D672018B925F20017A465 /* ViewController.m */,
 				651D672218B925F20017A465 /* Images.xcassets */,
@@ -289,6 +292,7 @@
 				6570269418C1601300B3E41D /* General_InfoViewController.m in Sources */,
 				651D671B18B925F20017A465 /* AppDelegate.m in Sources */,
 				651D671718B925F20017A465 /* main.m in Sources */,
+				2EC2783518C78075000F956A /* BuildingDatabase.xcdatamodeld in Sources */,
 				6570269118C15C8200B3E41D /* TourViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +514,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EC2783318C78075000F956A /* BuildingDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EC2783418C78075000F956A /* BuildingDatabase.xcdatamodel */,
+			);
+			currentVersion = 2EC2783418C78075000F956A /* BuildingDatabase.xcdatamodel */;
+			path = BuildingDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 651D66FF18B925F20017A465 /* Project object */;
 }
