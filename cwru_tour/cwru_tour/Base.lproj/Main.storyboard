@@ -15,13 +15,80 @@
                     <view key="view" contentMode="scaleToFill" id="S2a-or-BaD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="About CWRU - Overview" id="gvh-Js-XwK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xq-zK-JDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="-710"/>
+            <point key="canvasLocation" x="573" y="-718"/>
+        </scene>
+        <!--Guided Tour View Controller - Choose a Tour-->
+        <scene sceneID="4M9-4T-XOT">
+            <objects>
+                <tableViewController id="N0W-Ps-wT4" customClass="GuidedTourViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ghN-hn-mbF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TVU-ti-qCy">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVU-ti-qCy" id="xqs-Oc-afw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N0W-Ps-wT4" id="7vz-gW-yfs"/>
+                            <outlet property="delegate" destination="N0W-Ps-wT4" id="cxl-i0-9rY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose a Tour" id="2fm-75-kwe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="got-Pj-S18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-3133"/>
+        </scene>
+        <!--Free Roam View Controller - Free-Roam-->
+        <scene sceneID="vmR-ig-RQs">
+            <objects>
+                <viewController id="Olj-dj-Jcm" customClass="FreeRoamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sdq-ol-Ztx"/>
+                        <viewControllerLayoutGuide type="bottom" id="hto-Cn-ZdZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MWf-Mm-AmU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Free-Roam" id="fjp-YM-g4N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6oj-vU-koB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-2418"/>
+        </scene>
+        <!--View Controller - Sign Up-->
+        <scene sceneID="cLl-kS-4XZ">
+            <objects>
+                <viewController id="FGq-X7-QsD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WcE-a8-48P"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBr-DU-X4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s0W-dr-bZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="yJp-TA-jps"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwQ-uE-TOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328" y="-1719"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -109,15 +176,52 @@
                     <view key="view" contentMode="scaleToFill" id="d4X-f2-syM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8I-EC-4ad">
+                                <rect key="frame" x="93" y="151" width="157" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guided Tour">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="N0W-Ps-wT4" kind="push" id="bhG-3v-asc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g4-ml-rYO">
+                                <rect key="frame" x="119" y="236" width="105" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Free-Roam">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Olj-dj-Jcm" kind="push" id="Rk1-cY-fUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-tE-l2n">
+                                <rect key="frame" x="78" y="359" width="186" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up For In Person Tour">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FGq-X7-QsD" kind="push" id="UB9-KG-0i9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="CWRU Tours" id="Hv1-oK-huH"/>
+                    <connections>
+                        <outlet property="FreeRoamButton" destination="9g4-ml-rYO" id="ibD-xY-6Hm"/>
+                        <outlet property="SignUpButton" destination="uC0-tE-l2n" id="68x-gk-YWw"/>
+                        <outlet property="TourButton" destination="C8I-EC-4ad" id="Aft-UE-cwj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HW-D5-x5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="-1383"/>
+            <point key="canvasLocation" x="718" y="-2387"/>
         </scene>
-        <!--Buildings View Controller - CWRU Sights-->
+        <!--Buildings View Controller - CWRU Buildings-->
         <scene sceneID="CEB-xq-ArG">
             <objects>
                 <tableViewController id="IZf-39-MoF" customClass="BuildingsViewController" sceneMemberID="viewController">
@@ -140,11 +244,13 @@
                             <outlet property="delegate" destination="IZf-39-MoF" id="BPL-Tv-TXR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="CWRU Sights" id="0yp-tK-fZ3"/>
+                    <navigationItem key="navigationItem" title="CWRU Buildings" id="0yp-tK-fZ3">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="9z0-Un-B5z"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-ee-N67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="28"/>
+            <point key="canvasLocation" x="771" y="460"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WIR-yA-GRK">
@@ -162,7 +268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-zS-tfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="-1383"/>
+            <point key="canvasLocation" x="142" y="-2387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xNt-kA-dUt">
@@ -180,7 +286,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mc9-Nv-pGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-593" y="-710"/>
+            <point key="canvasLocation" x="47" y="-718"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AoD-W1-jQm">
@@ -198,7 +304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y2-Fk-Kab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="28"/>
+            <point key="canvasLocation" x="245" y="460"/>
         </scene>
     </scenes>
     <resources>

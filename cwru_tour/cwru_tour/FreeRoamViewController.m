@@ -1,20 +1,18 @@
 //
-//  SignUpViewController.m
+//  FreeRoamViewController.m
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 2/28/14.
+//  Created by Heath Hudgins on 3/8/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
-#import "General_InfoViewController.h"
+#import "FreeRoamViewController.h"
 
-@interface General_InfoViewController ()
+@interface FreeRoamViewController ()
 
 @end
 
-@implementation General_InfoViewController
-
-//startttt
+@implementation FreeRoamViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

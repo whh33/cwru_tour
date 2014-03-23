@@ -26,6 +26,8 @@
 		6570269118C15C8200B3E41D /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269018C15C8200B3E41D /* TourViewController.m */; };
 		6570269418C1601300B3E41D /* General_InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269318C1601300B3E41D /* General_InfoViewController.m */; };
 		6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6570269618C2A64A00B3E41D /* college-photo_8808..jpg */; };
+		65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */; };
+		65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		6570269218C1601300B3E41D /* General_InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = General_InfoViewController.h; sourceTree = "<group>"; };
 		6570269318C1601300B3E41D /* General_InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = General_InfoViewController.m; sourceTree = "<group>"; };
 		6570269618C2A64A00B3E41D /* college-photo_8808..jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "college-photo_8808..jpg"; sourceTree = "<group>"; };
+		65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedTourViewController.h; sourceTree = "<group>"; };
+		65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedTourViewController.m; sourceTree = "<group>"; };
+		65CB7D7B18CB9A84008CA02E /* FreeRoamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeRoamViewController.h; sourceTree = "<group>"; };
+		65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeRoamViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,12 +177,9 @@
 		6570268E18C1518300B3E41D /* Second Tier */ = {
 			isa = PBXGroup;
 			children = (
-				651D673F18BA70800017A465 /* BuildingsViewController.h */,
-				651D674018BA70800017A465 /* BuildingsViewController.m */,
-				6570268F18C15C8200B3E41D /* TourViewController.h */,
-				6570269018C15C8200B3E41D /* TourViewController.m */,
-				6570269218C1601300B3E41D /* General_InfoViewController.h */,
-				6570269318C1601300B3E41D /* General_InfoViewController.m */,
+				65CB7D7718CB9931008CA02E /* GeneralInfoList */,
+				65CB7D7618CB9922008CA02E /* TourList */,
+				65CB7D7518CB9914008CA02E /* BuildingList */,
 			);
 			name = "Second Tier";
 			sourceTree = "<group>";
@@ -187,6 +190,37 @@
 				6570269618C2A64A00B3E41D /* college-photo_8808..jpg */,
 			);
 			name = Pictures;
+			sourceTree = "<group>";
+		};
+		65CB7D7518CB9914008CA02E /* BuildingList */ = {
+			isa = PBXGroup;
+			children = (
+				651D673F18BA70800017A465 /* BuildingsViewController.h */,
+				651D674018BA70800017A465 /* BuildingsViewController.m */,
+			);
+			name = BuildingList;
+			sourceTree = "<group>";
+		};
+		65CB7D7618CB9922008CA02E /* TourList */ = {
+			isa = PBXGroup;
+			children = (
+				65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */,
+				65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */,
+				6570268F18C15C8200B3E41D /* TourViewController.h */,
+				6570269018C15C8200B3E41D /* TourViewController.m */,
+				65CB7D7B18CB9A84008CA02E /* FreeRoamViewController.h */,
+				65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */,
+			);
+			name = TourList;
+			sourceTree = "<group>";
+		};
+		65CB7D7718CB9931008CA02E /* GeneralInfoList */ = {
+			isa = PBXGroup;
+			children = (
+				6570269218C1601300B3E41D /* General_InfoViewController.h */,
+				6570269318C1601300B3E41D /* General_InfoViewController.m */,
+			);
+			name = GeneralInfoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */,
+				65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */,
 				651D674118BA70800017A465 /* BuildingsViewController.m in Sources */,
 				651D672118B925F20017A465 /* ViewController.m in Sources */,
 				6570269418C1601300B3E41D /* General_InfoViewController.m in Sources */,
