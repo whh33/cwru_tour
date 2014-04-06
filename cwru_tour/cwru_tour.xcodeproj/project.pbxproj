@@ -29,6 +29,7 @@
 		65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 65836A5818E06B970002FAD1 /* cwruSunTestPic.png */; };
 		65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */; };
 		65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */; };
+		65FEEFFD18EC827D00F5A6A0 /* About_Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FEEFFC18EC827D00F5A6A0 /* About_Header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedTourViewController.m; sourceTree = "<group>"; };
 		65CB7D7B18CB9A84008CA02E /* FreeRoamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeRoamViewController.h; sourceTree = "<group>"; };
 		65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeRoamViewController.m; sourceTree = "<group>"; };
+		65FEEFFC18EC827D00F5A6A0 /* About_Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About_Header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		651D66FE18B925F20017A465 = {
 			isa = PBXGroup;
 			children = (
+				65FEEFFC18EC827D00F5A6A0 /* About_Header.png */,
 				651D671018B925F20017A465 /* cwru_tour */,
 				651D672F18B925F20017A465 /* cwru_tourTests */,
 				651D670918B925F20017A465 /* Frameworks */,
@@ -302,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FEEFFD18EC827D00F5A6A0 /* About_Header.png in Resources */,
 				651D672318B925F20017A465 /* Images.xcassets in Resources */,
 				6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */,
 				65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */,

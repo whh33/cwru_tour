@@ -82,23 +82,13 @@
                     <view key="view" contentMode="scaleToFill" id="XCU-Pf-0c1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YsK-Mc-pO0">
-                                <rect key="frame" x="0.0" y="20" width="320" height="145"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgg-9D-NUG">
-                                <rect key="frame" x="0.0" y="164" width="320" height="354"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="MVK-2T-ocx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMD-dG-DoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="-1340"/>
+            <point key="canvasLocation" x="2021" y="-1283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KbG-yy-ZNX">
