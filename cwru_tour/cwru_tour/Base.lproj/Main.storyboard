@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jmz-Eg-bWv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TVU-ti-qCy">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVU-ti-qCy" id="xqs-Oc-afw">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -79,38 +79,84 @@
                         <viewControllerLayoutGuide type="top" id="SzS-kB-ZDb"/>
                         <viewControllerLayoutGuide type="bottom" id="hfP-gh-tto"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XCU-Pf-0c1">
+                    <view key="view" contentMode="bottom" id="XCU-Pf-0c1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pbl_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-db-cvS">
+                                <rect key="frame" x="0.0" y="122" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="students_with_church_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYO-NI-ppH">
+                                <rect key="frame" x="0.0" y="320" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ksl_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="fdD-oe-aRK">
+                                <rect key="frame" x="0.0" y="221" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cleveland_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELJ-A9-HyV">
+                                <rect key="frame" x="0.0" y="419" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="binary_walkway_cwrutour_general.png" translatesAutoresizingMaskIntoConstraints="NO" id="RZy-0o-v4m">
+                                <rect key="frame" x="0.0" y="26" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gny-Zs-Iky" userLabel="AboutGeneralButton">
+                                <rect key="frame" x="0.0" y="26" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GeneralButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dOO-vq-1t7" kind="push" id="mqm-gq-DLk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-hz-2Hq" userLabel="AboutFastFactsButton">
+                                <rect key="frame" x="0.0" y="221" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FastFactsButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2D5-fb-qgQ" kind="push" id="SBf-Td-WVr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90m-cB-lzV" userLabel="AboutCampusLifeButton">
+                                <rect key="frame" x="0.0" y="320" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CampusLifeButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GYS-Wr-r86" kind="push" id="XoU-jc-Y79"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92A-4q-2Wo" userLabel="AboutMissionButton">
+                                <rect key="frame" x="0.0" y="128" width="320" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="MissionButton"/>
+                                <connections>
+                                    <segue destination="sZX-a3-hid" kind="push" id="EyK-OM-DQn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-GY-QlU" userLabel="AboutClevelandButton">
+                                <rect key="frame" x="0.0" y="419" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ClevelandButton"/>
+                                <connections>
+                                    <segue destination="6Gp-hC-OFH" kind="push" id="xdD-bb-w3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="MVK-2T-ocx"/>
+                    <navigationItem key="navigationItem" id="8eV-GL-SCt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMD-dG-DoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021" y="-1283"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="KbG-yy-ZNX">
-            <objects>
-                <tabBarController extendedLayoutIncludesOpaqueBars="YES" definesPresentationContext="YES" id="vkP-Wb-wpP" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Q3z-2a-Ow2">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Jmz-Eg-bWv" kind="relationship" relationship="viewControllers" id="bL3-Xl-7LA"/>
-                        <segue destination="sZX-a3-hid" kind="relationship" relationship="viewControllers" id="1hB-v3-d6X"/>
-                        <segue destination="2D5-fb-qgQ" kind="relationship" relationship="viewControllers" id="Z1A-AE-bYm"/>
-                        <segue destination="6Gp-hC-OFH" kind="relationship" relationship="viewControllers" id="E2B-Ab-u6h"/>
-                        <segue destination="GYS-Wr-r86" kind="relationship" relationship="viewControllers" id="lj1-BX-mx5"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fnn-fB-Lbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1664" y="-566"/>
+            <point key="canvasLocation" x="2748" y="-1283"/>
         </scene>
         <!--View Controller - Mission-->
         <scene sceneID="Ggu-17-nwX">
@@ -125,11 +171,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mission" id="abx-9b-iKm"/>
+                    <tabBarItem key="tabBarItem" title="Mission" image="cwruSunTestPic.png" id="abx-9b-iKm"/>
+                    <navigationItem key="navigationItem" title="Mission" id="xfu-xU-SST"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1A-cq-gRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-268"/>
+            <point key="canvasLocation" x="3460" y="-253"/>
+        </scene>
+        <!--View Controller - General Info-->
+        <scene sceneID="Z2l-Al-P9k">
+            <objects>
+                <viewController title="General Info" id="dOO-vq-1t7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hA1-y7-1Ic"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWr-ZQ-hqu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TRe-A7-CIh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h3t-Im-sij"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zha-Ny-XhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3398" y="-1640"/>
         </scene>
         <!--View Controller - Facts and Figures-->
         <scene sceneID="vxl-yf-aPI">
@@ -144,11 +210,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Facts" id="smb-mK-8mg"/>
+                    <tabBarItem key="tabBarItem" title="Facts" image="cwruSunTestPic.png" id="smb-mK-8mg"/>
+                    <navigationItem key="navigationItem" title="Fast Facts" id="iuS-GN-2Yd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEE-gY-nLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="-946"/>
+            <point key="canvasLocation" x="3548" y="-946"/>
         </scene>
         <!--View Controller - Campus Life-->
         <scene sceneID="tnf-aX-zNy">
@@ -163,11 +230,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Campus Life" id="Jrp-fY-2VS"/>
+                    <tabBarItem key="tabBarItem" title="Campus Life" image="cwruSunTestPic.png" id="Jrp-fY-2VS"/>
+                    <navigationItem key="navigationItem" title="Campus Life" id="hss-rs-Rel"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IX8-sK-dLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="147"/>
+            <point key="canvasLocation" x="2428" y="-413"/>
         </scene>
         <!--View Controller - Cleveland-->
         <scene sceneID="icy-2Y-5LN">
@@ -182,13 +250,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cleveland" id="ZAz-q3-dyH"/>
+                    <tabBarItem key="tabBarItem" title="Cleveland" image="cwruSunTestPic.png" id="ZAz-q3-dyH"/>
+                    <navigationItem key="navigationItem" title="Cleveland and University Circle" id="QQB-kd-kl1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feS-22-5Gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2096" y="81"/>
+            <point key="canvasLocation" x="2930" y="-217"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - CWRU-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -218,9 +287,6 @@
                                 <state key="normal" title="Tours">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="PAy-79-t35" kind="push" id="ZeK-Wd-f1x"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-Px-aEI">
                                 <rect key="frame" x="179" y="39" width="141" height="240"/>
@@ -229,9 +295,6 @@
                                 <state key="normal" title="Buildings">
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="XNo-8y-pW1" kind="push" id="xOS-bI-K8O"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-gj-pfl">
                                 <rect key="frame" x="0.0" y="287" width="171" height="281"/>
@@ -250,6 +313,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="CWRU" image="cwruSunTestPic.png" id="pFM-aU-bBA"/>
                     <connections>
                         <outlet property="BackgroundView" destination="swi-Lb-dCJ" id="cL0-Vx-FPX"/>
                         <outlet property="buildingButton" destination="xjK-Px-aEI" id="AgE-zf-CFG"/>
@@ -260,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-744" y="-991"/>
+            <point key="canvasLocation" x="-526" y="-1849"/>
         </scene>
         <!--Tour View Controller - Title-->
         <scene sceneID="FrW-oZ-8DN">
@@ -307,6 +371,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Tours" image="cwruSunTestPic.png" id="EKB-lm-S3o"/>
                     <navigationItem key="navigationItem" title="Title" id="eoX-Tv-JSZ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Yer-rt-SMa"/>
                     </navigationItem>
@@ -330,7 +395,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fZy-y4-CkK">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZy-y4-CkK" id="2EG-Ne-agL">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -343,15 +408,17 @@
                             <outlet property="delegate" destination="IZf-39-MoF" id="BPL-Tv-TXR"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Buildings" image="cwruSunTestPic.png" id="cac-9c-GRo"/>
                     <navigationItem key="navigationItem" title="Select a Building" id="ckB-oe-Jx9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-ee-N67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="-174"/>
+            <point key="canvasLocation" x="614" y="-434"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WIR-yA-GRK">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-zS-tfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PAy-79-t35" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G66-z4-aH5">
@@ -363,9 +430,8 @@
                         <segue destination="hTP-zd-uRQ" kind="relationship" relationship="rootViewController" id="nUV-cg-eMf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-zS-tfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="-2387"/>
+            <point key="canvasLocation" x="102" y="-2561"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AoD-W1-jQm">
@@ -383,16 +449,65 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y2-Fk-Kab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="-174"/>
+            <point key="canvasLocation" x="-46" y="-166"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eyP-KU-Gcc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ANQ-v8-Tut" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="c2N-YJ-M41">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="dN8-xx-gMA"/>
+                        <segue destination="hTP-zd-uRQ" kind="relationship" relationship="viewControllers" id="vOo-1h-dgH"/>
+                        <segue destination="IZf-39-MoF" kind="relationship" relationship="viewControllers" id="UN4-nE-e39"/>
+                        <segue destination="pTt-na-Xsp" kind="relationship" relationship="viewControllers" id="G4W-ts-tcY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3x-jF-idn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="-1023"/>
+        </scene>
+        <!--Navigation Controller - About-->
+        <scene sceneID="QhV-ic-vdK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pTt-na-Xsp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="MVK-2T-ocx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o7Q-O2-nmb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jmz-Eg-bWv" kind="relationship" relationship="rootViewController" id="kd8-38-GOC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9l3-lU-Wkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2281" y="-1283"/>
         </scene>
     </scenes>
     <resources>
+        <image name="binary_walkway_cwrutour_general.png" width="600" height="184"/>
+        <image name="cleveland_cwrutour_edited.png" width="599" height="198"/>
         <image name="college-photo_8808..jpg" width="500" height="500"/>
         <image name="cwruSunTestPic.png" width="60" height="60"/>
+        <image name="ksl_cwrutour_edited.png" width="598" height="184"/>
+        <image name="pbl_cwrutour_edited.png" width="550" height="205"/>
+        <image name="students_with_church_cwrutour_edited.png" width="600" height="183"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="UN4-nE-e39"/>
+        <segue reference="vOo-1h-dgH"/>
+    </inferredMetricsTieBreakers>
 </document>
