@@ -110,7 +110,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dOO-vq-1t7" kind="push" id="mqm-gq-DLk"/>
+                                    <segue destination="dOO-vq-1t7" kind="push" id="f7E-iX-4nh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-hz-2Hq" userLabel="AboutFastFactsButton">
@@ -120,7 +120,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2D5-fb-qgQ" kind="push" id="SBf-Td-WVr"/>
+                                    <segue destination="2D5-fb-qgQ" kind="push" id="cdB-Fd-I1d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90m-cB-lzV" userLabel="AboutCampusLifeButton">
@@ -169,9 +169,15 @@
                     <view key="view" contentMode="scaleToFill" id="A7r-Bl-pqc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pbl_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-db-zpe">
+                                <rect key="frame" x="0.0" y="65" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mission" image="cwruSunTestPic.png" id="abx-9b-iKm"/>
+                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="abx-9b-iKm"/>
                     <navigationItem key="navigationItem" title="Mission" id="xfu-xU-SST"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1A-cq-gRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,9 +195,15 @@
                     <view key="view" contentMode="scaleToFill" id="TRe-A7-CIh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="binary_walkway_cwrutour_general.png" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-iX-ywm">
+                                <rect key="frame" x="0.0" y="65" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="h3t-Im-sij"/>
+                    <navigationItem key="navigationItem" title="General About" id="h3t-Im-sij"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zha-Ny-XhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,9 +220,22 @@
                     <view key="view" contentMode="scaleToFill" id="3Fa-gR-xnX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ksl_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="B0O-v4-Bfd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP7-3y-MnP">
+                                <rect key="frame" x="0.0" y="164" width="320" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Facts" image="cwruSunTestPic.png" id="smb-mK-8mg"/>
+                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="smb-mK-8mg"/>
                     <navigationItem key="navigationItem" title="Fast Facts" id="iuS-GN-2Yd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEE-gY-nLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,6 +253,12 @@
                     <view key="view" contentMode="scaleToFill" id="edZ-Z9-w3C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="students_with_church_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="pbH-du-JQd">
+                                <rect key="frame" x="0.0" y="66" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Campus Life" image="cwruSunTestPic.png" id="Jrp-fY-2VS"/>
@@ -248,9 +279,15 @@
                     <view key="view" contentMode="scaleToFill" id="lFk-9U-0nl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cleveland_cwrutour_edited.png" translatesAutoresizingMaskIntoConstraints="NO" id="ogx-pg-v2K">
+                                <rect key="frame" x="0.0" y="64" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cleveland" image="cwruSunTestPic.png" id="ZAz-q3-dyH"/>
+                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="ZAz-q3-dyH"/>
                     <navigationItem key="navigationItem" title="Cleveland and University Circle" id="QQB-kd-kl1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feS-22-5Gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -280,46 +317,12 @@
                                     <navigationItem title="Case Western Reserve University" id="kw0-pa-GRV"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-gV-dq3">
-                                <rect key="frame" x="0.0" y="39" width="171" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Tours">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-Px-aEI">
-                                <rect key="frame" x="179" y="39" width="141" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Buildings">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-gj-pfl">
-                                <rect key="frame" x="0.0" y="287" width="171" height="281"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="General Info">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-Ne-Gfs">
-                                <rect key="frame" x="179" y="287" width="141" height="281"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="More"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CWRU" image="cwruSunTestPic.png" id="pFM-aU-bBA"/>
                     <connections>
                         <outlet property="BackgroundView" destination="swi-Lb-dCJ" id="cL0-Vx-FPX"/>
-                        <outlet property="buildingButton" destination="xjK-Px-aEI" id="AgE-zf-CFG"/>
-                        <outlet property="moreOptionsButton" destination="c4L-Ne-Gfs" id="Xp0-or-LzR"/>
-                        <outlet property="signUpButton" destination="Zcf-gj-pfl" id="al7-Q9-GIV"/>
-                        <outlet property="tourButton" destination="kDf-gV-dq3" id="TeY-ro-9CF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
