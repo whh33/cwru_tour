@@ -24,7 +24,7 @@
 		651D673618B925F20017A465 /* cwru_tourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D673518B925F20017A465 /* cwru_tourTests.m */; };
 		651D674118BA70800017A465 /* BuildingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651D674018BA70800017A465 /* BuildingsViewController.m */; };
 		6570269118C15C8200B3E41D /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269018C15C8200B3E41D /* TourViewController.m */; };
-		6570269418C1601300B3E41D /* General_InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269318C1601300B3E41D /* General_InfoViewController.m */; };
+		6570269418C1601300B3E41D /* AboutInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269318C1601300B3E41D /* AboutInfoViewController.m */; };
 		6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6570269618C2A64A00B3E41D /* college-photo_8808..jpg */; };
 		65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 65836A5818E06B970002FAD1 /* cwruSunTestPic.png */; };
 		65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */; };
@@ -35,6 +35,11 @@
 		65D28EA518F222CA00A922E8 /* pbl_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */; };
 		65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */; };
 		65D28EA918F229FC00A922E8 /* cleveland_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */; };
+		65DADEC518FEFCFA00C124CC /* GeneralInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADEC418FEFCFA00C124CC /* GeneralInfoViewController.m */; };
+		65DADECE18FF055300C124CC /* FastFactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADECD18FF055300C124CC /* FastFactsViewController.m */; };
+		65DADED118FF05A600C124CC /* ClevelandInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADED018FF05A600C124CC /* ClevelandInfoViewController.m */; };
+		65DADED718FF060300C124CC /* MissionInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADED618FF060300C124CC /* MissionInfoViewController.m */; };
+		65DADEDA18FF064C00C124CC /* CampusLifeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADED918FF064C00C124CC /* CampusLifeInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +77,8 @@
 		651D674018BA70800017A465 /* BuildingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingsViewController.m; sourceTree = "<group>"; };
 		6570268F18C15C8200B3E41D /* TourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourViewController.h; sourceTree = "<group>"; };
 		6570269018C15C8200B3E41D /* TourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourViewController.m; sourceTree = "<group>"; };
-		6570269218C1601300B3E41D /* General_InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = General_InfoViewController.h; sourceTree = "<group>"; };
-		6570269318C1601300B3E41D /* General_InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = General_InfoViewController.m; sourceTree = "<group>"; };
+		6570269218C1601300B3E41D /* AboutInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutInfoViewController.h; sourceTree = "<group>"; };
+		6570269318C1601300B3E41D /* AboutInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutInfoViewController.m; sourceTree = "<group>"; };
 		6570269618C2A64A00B3E41D /* college-photo_8808..jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "college-photo_8808..jpg"; sourceTree = "<group>"; };
 		65836A5818E06B970002FAD1 /* cwruSunTestPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cwruSunTestPic.png; sourceTree = "<group>"; };
 		65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedTourViewController.h; sourceTree = "<group>"; };
@@ -86,6 +91,16 @@
 		65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pbl_cwrutour_edited.png; sourceTree = "<group>"; };
 		65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_with_church_cwrutour_edited.png; sourceTree = "<group>"; };
 		65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cleveland_cwrutour_edited.png; sourceTree = "<group>"; };
+		65DADEC318FEFCFA00C124CC /* GeneralInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralInfoViewController.h; sourceTree = "<group>"; };
+		65DADEC418FEFCFA00C124CC /* GeneralInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralInfoViewController.m; sourceTree = "<group>"; };
+		65DADECC18FF055300C124CC /* FastFactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsViewController.h; sourceTree = "<group>"; };
+		65DADECD18FF055300C124CC /* FastFactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsViewController.m; sourceTree = "<group>"; };
+		65DADECF18FF05A600C124CC /* ClevelandInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClevelandInfoViewController.h; sourceTree = "<group>"; };
+		65DADED018FF05A600C124CC /* ClevelandInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClevelandInfoViewController.m; sourceTree = "<group>"; };
+		65DADED518FF060300C124CC /* MissionInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionInfoViewController.h; sourceTree = "<group>"; };
+		65DADED618FF060300C124CC /* MissionInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionInfoViewController.m; sourceTree = "<group>"; };
+		65DADED818FF064C00C124CC /* CampusLifeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusLifeInfoViewController.h; sourceTree = "<group>"; };
+		65DADED918FF064C00C124CC /* CampusLifeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusLifeInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,8 +253,18 @@
 		65CB7D7718CB9931008CA02E /* GeneralInfoList */ = {
 			isa = PBXGroup;
 			children = (
-				6570269218C1601300B3E41D /* General_InfoViewController.h */,
-				6570269318C1601300B3E41D /* General_InfoViewController.m */,
+				6570269218C1601300B3E41D /* AboutInfoViewController.h */,
+				6570269318C1601300B3E41D /* AboutInfoViewController.m */,
+				65DADEC318FEFCFA00C124CC /* GeneralInfoViewController.h */,
+				65DADEC418FEFCFA00C124CC /* GeneralInfoViewController.m */,
+				65DADECC18FF055300C124CC /* FastFactsViewController.h */,
+				65DADECD18FF055300C124CC /* FastFactsViewController.m */,
+				65DADECF18FF05A600C124CC /* ClevelandInfoViewController.h */,
+				65DADED018FF05A600C124CC /* ClevelandInfoViewController.m */,
+				65DADED518FF060300C124CC /* MissionInfoViewController.h */,
+				65DADED618FF060300C124CC /* MissionInfoViewController.m */,
+				65DADED818FF064C00C124CC /* CampusLifeInfoViewController.h */,
+				65DADED918FF064C00C124CC /* CampusLifeInfoViewController.m */,
 			);
 			name = GeneralInfoList;
 			sourceTree = "<group>";
@@ -350,10 +375,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */,
+				65DADEDA18FF064C00C124CC /* CampusLifeInfoViewController.m in Sources */,
+				65DADED118FF05A600C124CC /* ClevelandInfoViewController.m in Sources */,
+				65DADED718FF060300C124CC /* MissionInfoViewController.m in Sources */,
 				65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */,
 				651D674118BA70800017A465 /* BuildingsViewController.m in Sources */,
+				65DADEC518FEFCFA00C124CC /* GeneralInfoViewController.m in Sources */,
 				651D672118B925F20017A465 /* ViewController.m in Sources */,
-				6570269418C1601300B3E41D /* General_InfoViewController.m in Sources */,
+				6570269418C1601300B3E41D /* AboutInfoViewController.m in Sources */,
+				65DADECE18FF055300C124CC /* FastFactsViewController.m in Sources */,
 				651D671B18B925F20017A465 /* AppDelegate.m in Sources */,
 				651D671718B925F20017A465 /* main.m in Sources */,
 				2EC2783518C78075000F956A /* BuildingDatabase.xcdatamodeld in Sources */,
