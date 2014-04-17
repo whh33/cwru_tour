@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EC2783518C78075000F956A /* BuildingDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EC2783318C78075000F956A /* BuildingDatabase.xcdatamodeld */; };
+		2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EDDD04919006E8900A581E6 /* InfoWindow.xib */; };
+		2EDDD04E19006EEF00A581E6 /* CustomInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */; };
 		2EEAD45618FF46EE0075274E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEAD45518FF46EE0075274E /* GoogleMaps.framework */; };
 		2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2EEAD45718FF471C0075274E /* GoogleMaps.bundle */; };
 		2EEAD45A18FF472B0075274E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEAD45918FF472B0075274E /* AVFoundation.framework */; };
@@ -73,6 +75,9 @@
 
 /* Begin PBXFileReference section */
 		2EC2783418C78075000F956A /* BuildingDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BuildingDatabase.xcdatamodel; sourceTree = "<group>"; };
+		2EDDD04919006E8900A581E6 /* InfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoWindow.xib; sourceTree = "<group>"; };
+		2EDDD04C19006EEF00A581E6 /* CustomInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindow.h; sourceTree = "<group>"; };
+		2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindow.m; sourceTree = "<group>"; };
 		2EEAD45518FF46EE0075274E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		2EEAD45718FF471C0075274E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		2EEAD45918FF472B0075274E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +187,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EDDD04B19006EC200A581E6 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				2EDDD04919006E8900A581E6 /* InfoWindow.xib */,
+				2EDDD04C19006EEF00A581E6 /* CustomInfoWindow.h */,
+				2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */,
+			);
+			name = PopupView;
+			sourceTree = "<group>";
+		};
 		651D66FE18B925F20017A465 = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +326,7 @@
 		65CB7D7618CB9922008CA02E /* TourList */ = {
 			isa = PBXGroup;
 			children = (
+				2EDDD04B19006EC200A581E6 /* PopupView */,
 				2EEAD48118FF5E9D0075274E /* MDDirectionService.h */,
 				2EEAD48218FF5E9D0075274E /* MDDirectionService.m */,
 				65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */,
@@ -427,6 +443,7 @@
 				651D672318B925F20017A465 /* Images.xcassets in Resources */,
 				2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */,
 				65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */,
+				2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */,
 				6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */,
 				65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */,
 				2EEAD47B18FF4ED30075274E /* newLocation.gpx in Resources */,
@@ -453,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EDDD04E19006EEF00A581E6 /* CustomInfoWindow.m in Sources */,
 				65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */,
 				65DADEDA18FF064C00C124CC /* CampusLifeInfoViewController.m in Sources */,
 				65DADED118FF05A600C124CC /* ClevelandInfoViewController.m in Sources */,

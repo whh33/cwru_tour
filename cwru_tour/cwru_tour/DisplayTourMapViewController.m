@@ -9,6 +9,7 @@
 #import "DisplayTourMapViewController.h"
 #import "MDDirectionService.h"
 #import "Landmark.h"
+#import "CustomInfoWindow.h"
 
 @interface DisplayTourMapViewController ()
     @property (strong, nonatomic) NSMutableArray *waypoints;
@@ -119,6 +120,12 @@ CLLocationCoordinate2D startPoint;
         landmarkMarker.map = _mapView;
         self.view = _mapView;
     }
+}
+
+-(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+    CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
+    [infoWindow.buildingInfo setText:@"Enter Building information here..."];
+    return infoWindow;
 }
 
 - (void)didReceiveMemoryWarning{
