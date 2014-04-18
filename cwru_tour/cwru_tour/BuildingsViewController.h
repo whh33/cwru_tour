@@ -2,12 +2,17 @@
 //  BuildingsViewController.h
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 2/23/14.
-//  Copyright (c) 2014 Heath Hudgins. All rights reserved.
+//  Created by Sean Corcoran on 3/4/14.
+//  Copyright (c) 2014 EECS397. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface BuildingsViewController : UITableViewController
+@interface BuildingsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSEntityDescription *entity;
 
 @end

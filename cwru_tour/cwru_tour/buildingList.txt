@@ -1,0 +1,4 @@
+Building Name^Longitude^Latitude
+Alpha Phi^41.514146^-81.607832
+Carlton Commons^41.500178^-81.601827
+Olin Building^41.50217^-81.607834
