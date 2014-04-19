@@ -118,13 +118,33 @@
         
         NSManagedObject *newBuilding = [[NSManagedObject alloc] initWithEntity:buildingEntity insertIntoManagedObjectContext:context];
         
-        NSString *buildingName = record[0];
-        NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithString:record[1]];
-        NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithString:record[2]];
+        if ([record count] == 4) {
+            NSString *buildingName = record[0];
+            NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithString:record[1]];
+            NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithString:record[2]];
+            NSString *description = record[3];
+            
+            [newBuilding setValue:buildingName forKey:@"name"];
+            [newBuilding setValue:latitude forKey:@"latitude"];
+            [newBuilding setValue:longitude forKey:@"longitude"];
+            [newBuilding setValue:description forKey:@"longDescription"];
+        } else {
+            NSString *buildingName = record[0];
+            NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithString:record[1]];
+            NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithString:record[2]];
+            NSDecimalNumber *waypointLat = [NSDecimalNumber decimalNumberWithString:record[3]];
+            NSDecimalNumber *waypointLon = [NSDecimalNumber decimalNumberWithString:record[4]];
+            NSString *description = record[5];
+            
+            [newBuilding setValue:buildingName forKey:@"name"];
+            [newBuilding setValue:latitude forKey:@"latitude"];
+            [newBuilding setValue:longitude forKey:@"longitude"];
+            [newBuilding setValue:waypointLon forKey:@"waypointLon"];
+            [newBuilding setValue:waypointLat forKey:@"waypointLat"];
+            [newBuilding setValue:description forKey:@"longDescription"];
+        }
         
-        [newBuilding setValue:buildingName forKey:@"name"];
-        [newBuilding setValue:longitude forKey:@"longitude"];
-        [newBuilding setValue:latitude forKey:@"latitude"];
+        
     }
     
     // Save the context.
@@ -220,7 +240,7 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"cwru_tour.sqlite"];
     
     BOOL alreadyRan = [[NSUserDefaults standardUserDefaults] boolForKey:@"alreadyRan"];
-    
+                       
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

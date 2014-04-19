@@ -8,15 +8,16 @@
 
 #import "Landmark.h"
 @implementation Landmark
-@synthesize title, landmarkMarker, landmarkPositionString, coordinate;
+@synthesize title, landmarkMarker, landmarkPositionString, coordinate, annotationCoordinate;
 
--(id) initWithTitle: (NSString *) landmarkTitle latitude: (double) lat longitude: (double) lon {
+-(id) initWithTitle: (NSString *) landmarkTitle waypointLatitude: (double) wLat waypointLongitude: (double) wLon annotationLatitude: (double) aLat annotationLongitude: (double) aLon{
     self = [super init];
     if(self){
         title = landmarkTitle;
-        [self setCLLocatinCoordinateObject:lat with:lon];
+        [self setCLLocatinCoordinateObject:wLat with:wLon];
         [self setLandmarkMarker];
-        [self setlandmarkPositionString:(double) lat and:(double) lon];
+        [self setAnnotationCLLocationCoordinate: (double)aLat with: (double)aLon];
+        [self setWaypointPositionString:(double) wLat and:(double) wLon];
         
     }
     return self;
@@ -29,8 +30,12 @@
     CLLocationCoordinate2D newCoord = CLLocationCoordinate2DMake(latitude, longitude);
     coordinate = [NSValue valueWithMKCoordinate:newCoord];
 }
--(void) setlandmarkPositionString:(double)latitude and: (double) longitude{
+-(void) setWaypointPositionString:(double)latitude and: (double) longitude{
     landmarkPositionString = [NSString stringWithFormat:@"%f, %f", latitude,longitude];
+}
+-(void) setAnnotationCLLocationCoordinate: (double)latitude with:(double)longitude{
+    CLLocationCoordinate2D newCoord = CLLocationCoordinate2DMake(latitude, longitude);
+    annotationCoordinate = [NSValue valueWithMKCoordinate:newCoord];
 }
 -(id) getTitle{
     return title;
@@ -44,9 +49,12 @@
     return coordinate;
 }
 
--(id) getLandmarkPositionString{
+-(id) getWaypointPositionString{
     return landmarkPositionString;
 }
 
+-(id) getAnnotationCoordinateObject{
+    return annotationCoordinate;
+}
 
 @end

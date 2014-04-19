@@ -20,13 +20,16 @@
 @property(nonatomic, copy) GMSMarker *landmarkMarker;
 @property(nonatomic, readwrite) NSString *landmarkPositionString;
 @property(nonatomic, readwrite) NSValue *coordinate;
--(id) initWithTitle: (NSString *) landmarkTitle latitude: (double) lat longitude: (double) lon;
+@property(nonatomic, readwrite) NSValue *annotationCoordinate;
+-(id) initWithTitle: (NSString *) landmarkTitle waypointLatitude: (double) wLat waypointLongitude: (double) wLon annotationLatitude: (double) aLat annotationLongitude: (double) aLon;
 -(void) setLandmarkMarker;
 -(void) setCLLocatinCoordinateObject:(double)latitude with:(double)longitude;
--(void) setlandmarkPositionString:(double)latitude and: (double) longitude;
--(id) getLandmarkPositionString;
+-(void) setWaypointPositionString:(double)latitude and: (double) longitude;
+-(void) setAnnotationCLLocationCoordinate: (double)latitude with:(double)longitude;
+-(id) getWaypointPositionString;
 -(id) getLandmarkMarker;
 -(id) getcoordinateObject;
 -(id) getTitle;
+-(id) getAnnotationCoordinateObject;
 
 @end

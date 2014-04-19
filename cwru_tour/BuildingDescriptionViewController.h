@@ -18,7 +18,5 @@
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *longitude;
-@property (weak, nonatomic) IBOutlet UILabel *latitude;
-
+@property (weak, nonatomic) IBOutlet UILabel *description;
 @end

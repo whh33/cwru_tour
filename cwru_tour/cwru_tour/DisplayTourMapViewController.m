@@ -17,7 +17,9 @@
     @property(strong, nonatomic) NSMutableArray *landmarksOnRoute;
 @end
 
-@implementation DisplayTourMapViewController
+@implementation DisplayTourMapViewController{
+   bool firstLocationUpdate;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,21 +30,22 @@
     return self;
 }
 
-Boolean noStartSet = TRUE;
+
 CLLocationCoordinate2D startPoint;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //declare core data and local arrays
     self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     self.waypoints = [NSMutableArray array];
     self.waypointStrings = [NSMutableArray array];
-    
-    // Create a GMSCameraPosition that tells the map to display the coordinate at zoom level 6
+    //start map setup
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35.995602
                                                             longitude:-78.902153
                                                                  zoom:13];
+    
     self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     self.mapView.myLocationEnabled = YES;
     self.mapView.mapType = kGMSTypeHybrid;
@@ -54,20 +57,32 @@ CLLocationCoordinate2D startPoint;
     self.mapView.settings.myLocationButton = YES;
     self.mapView.delegate = self;
     self.view = self.mapView;
+   
+    //call methods to draw route and set annotations
     [self updateCurrentLocation];
     [self createLandmarkObjects];
+    
+    
     [self loadRoute];
 }
 
 - (void)updateCurrentLocation {
-    sleep(1);
+    BOOL tourAlreadyRan = [[NSUserDefaults standardUserDefaults] boolForKey:@"tourAlreadyRan"];
+    
+    if (!tourAlreadyRan) {
+        //pause to allow user to click the allow button
+        sleep(2);
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"tourAlreadyRan"];
+    }
+    
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     [locationManager startUpdatingLocation];
+    sleep(1);//pause again to let the location manager time to setup
     CLLocation *location = [locationManager location];
     CLLocationCoordinate2D currentLocation = [location coordinate];
-    if(noStartSet){
+    if(!firstLocationUpdate){
         startPoint = currentLocation;
-        noStartSet = FALSE;
+        firstLocationUpdate = YES;
     }
     [self.mapView animateToLocation:currentLocation];
 }
@@ -96,18 +111,19 @@ CLLocationCoordinate2D startPoint;
         NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
         NSManagedObject *fetchedObject = array[0];
         
-        double longitude = [[fetchedObject valueForKey:@"longitude"] doubleValue];
-        double latitude = [[fetchedObject valueForKey:@"latitude"] doubleValue];
-        
+        double waypointLongitude = [[fetchedObject valueForKey:@"waypointLon"] doubleValue];
+        double waypointLatitude = [[fetchedObject valueForKey:@"waypointLat"] doubleValue];
+        double annotationLongitude= [[fetchedObject valueForKey:@"longitude"] doubleValue];
+        double annotationLatitude= [[fetchedObject valueForKey:@"latitude"] doubleValue];
         //NSLog(@"%@ %f %f",buildingName, longitude, latitude);
         
-        Landmark *temp = [[Landmark alloc] initWithTitle:buildingName latitude:latitude longitude:longitude];
+        Landmark *temp = [[Landmark alloc] initWithTitle:buildingName waypointLatitude:waypointLatitude waypointLongitude:waypointLongitude annotationLatitude:annotationLatitude annotationLongitude:annotationLongitude];
         [self.landmarksOnRoute addObject:temp];
     }
     
-//    Landmark *fijiHouse = [[Landmark alloc] initWithTitle:@"Fiji House" latitude: 41.511217 longitude: -81.606697];
-//    Landmark *wadeCommons = [[Landmark alloc] initWithTitle:@"Wade Commons" latitude:41.5133020 longitude:-81.605268];
-//    Landmark *nrv = [[Landmark alloc] initWithTitle:@"NRV" latitude:41.514217 longitude:-81.604268];
+//    Landmark *fijiHouse = [[Landmark alloc] initWithTitle:@"Bingham" waypointLatitude:41.502582 waypointLongitude:-81.607177 annotationLatitude:41.502582 annotationLongitude:-81.607177];
+//    Landmark *wadeCommons = [[Landmark alloc] initWithTitle:@"KSL" waypointLatitude:41.506913 waypointLongitude:-81.608848 annotationLatitude: 41.506913 annotationLongitude: -81.608848];
+//    Landmark *nrv = [[Landmark alloc] initWithTitle:@"Leutner Commons" waypointLatitude:41.513345 waypointLongitude:-81.605823 annotationLatitude: 41.513345 annotationLongitude:-81.605823];
 //    self.landmarksOnRoute = [[NSMutableArray alloc] init];
 //    [self.landmarksOnRoute addObject:nrv];
 //    [self.landmarksOnRoute addObject:fijiHouse];
@@ -115,6 +131,26 @@ CLLocationCoordinate2D startPoint;
 }
 
 -(void)loadRoute{
+    
+    for(int i=0; i< self.landmarksOnRoute.count -1; i++){
+        Landmark *temp1 = self.landmarksOnRoute[i];
+        Landmark *temp2 = self.landmarksOnRoute[i+1];
+        NSMutableArray *sourceDestination = [[NSMutableArray alloc] init];
+        [sourceDestination addObject:temp1.getWaypointPositionString];
+        [sourceDestination addObject:temp2.getWaypointPositionString];
+        //if (self.waypoints.count > 1) {
+            NSDictionary *query = @{ @"sensor" : @"false",
+                                     @"waypoints" : sourceDestination };
+            MDDirectionService *mds = [[MDDirectionService alloc] init];
+            SEL selector = @selector(addDirections:);
+            [mds setDirectionsQuery:query
+                       withSelector:selector
+                       withDelegate:self];
+        //}else{
+        //    NSLog(@"No route created, only %lu", (unsigned long)self.waypoints.count);
+        //}
+    }
+    /*
     GMSMarker *startMarker = [GMSMarker markerWithPosition:startPoint];
     [self.waypoints addObject:startMarker];
     for(Landmark *landmark in self.landmarksOnRoute){
@@ -123,7 +159,7 @@ CLLocationCoordinate2D startPoint;
     NSString *startPositionString = [NSString stringWithFormat:@"%f,%f",startPoint.latitude,startPoint.longitude];
     [self.waypointStrings addObject:startPositionString];
     for(Landmark *landmark in self.landmarksOnRoute){
-        [self.waypointStrings addObject:landmark.getLandmarkPositionString];
+        [self.waypointStrings addObject:landmark.getWaypointPositionString];
     }
     if (self.waypoints.count > 1) {
         NSDictionary *query = @{ @"sensor" : @"false",
@@ -136,7 +172,9 @@ CLLocationCoordinate2D startPoint;
     }else{
         NSLog(@"No route created, only %lu", (unsigned long)self.waypoints.count);
     }
+     */
     [self addMapAnnotation];
+    
 }
 
 -(void)addDirections:(NSDictionary *)json{
@@ -150,7 +188,7 @@ CLLocationCoordinate2D startPoint;
 
 -(void)addMapAnnotation{
     for(Landmark *landmark in self.landmarksOnRoute){
-        GMSMarker *landmarkMarker = [GMSMarker markerWithPosition:[landmark.getcoordinateObject MKCoordinateValue]];
+        GMSMarker *landmarkMarker = [GMSMarker markerWithPosition:[landmark.getAnnotationCoordinateObject MKCoordinateValue]];
         landmarkMarker.title = landmark.getTitle;
         landmarkMarker.map = _mapView;
         self.view = _mapView;
@@ -159,7 +197,8 @@ CLLocationCoordinate2D startPoint;
 
 -(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
     CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
-    [infoWindow.buildingInfo setText:@"Enter Building information here..."];
+    
+    [infoWindow.buildingInfo setText:marker.title];
     return infoWindow;
 }
 

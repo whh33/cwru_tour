@@ -14,12 +14,18 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDecimalNumber * longitude;
 @property (nonatomic, retain) NSDecimalNumber * latitude;
+@property (nonatomic, retain) NSDecimalNumber * waypointLon;
+@property (nonatomic, retain) NSDecimalNumber * waypointLat;
+@property (nonatomic, retain) NSString * description;
 @end
 
 @interface Building (CoreDataGeneratedAccessors)
 
 - (Building *) setValueWithBuildingName:(NSString*) name
                               longitude:(NSString*) longitude
-                               latitude:(NSString*) latitude;
+                               latitude:(NSString*) latitude
+                              waypointLon:(NSString*) waypointLon
+                               waypointLat:(NSString*) waypointLat
+                            description:(NSString*) description;
 
 @end

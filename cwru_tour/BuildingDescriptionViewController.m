@@ -28,12 +28,22 @@
     [super viewDidLoad];
     
     self.name.text = [self.instanceIndividual valueForKey:@"name"];
+    self.name.numberOfLines = 4;
+    [self.name setFont:[UIFont fontWithName:@"Helvetica" size:19]];
+    [self.name sizeToFit];
     
+    self.description.text = [self.instanceIndividual valueForKey:@"longDescription"];
+    
+    
+    //[self.view addSubview:myView];
+    
+    /*
     id temp = [self.instanceIndividual valueForKey:@"longitude"];
     self.longitude.text = [temp stringValue];
     
     temp = [self.instanceIndividual valueForKey:@"latitude"];
     self.latitude.text = [temp stringValue];
+     */
     
 }
 
