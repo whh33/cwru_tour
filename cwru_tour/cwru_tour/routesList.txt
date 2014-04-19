@@ -1,0 +1,4 @@
+Route Name^Buildings in route
+Route 1^Village 115 House 1, Village 115 House 2, Village 115 House 3a, Village 115 House 3b, Village 115 House 4, Village 115 House 5, Village 115 House 6 and 7
+Route 2^Glennan Building, Kelvin Smith Library, Leutner Commons, Uptown, Bingham Building
+Route 3^Olin Building, Bingham Building, Strosacker Auditorium

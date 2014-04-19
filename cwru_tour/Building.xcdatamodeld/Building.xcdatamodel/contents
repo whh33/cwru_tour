@@ -5,7 +5,12 @@
         <attribute name="longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Route" syncable="YES">
+        <attribute name="buildingsInRoute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Building" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Route" positionX="-36" positionY="36" width="128" height="75"/>
     </elements>
 </model>

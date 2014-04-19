@@ -364,7 +364,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="N0W-Ps-wT4" kind="push" id="bhG-3v-asc"/>
+                                    <segue destination="N0W-Ps-wT4" kind="push" identifier="guided" id="bhG-3v-asc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g4-ml-rYO">
@@ -384,7 +384,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FGq-X7-QsD" kind="push" id="UB9-KG-0i9"/>
+                                    <action selector="launchWeb:" destination="hTP-zd-uRQ" eventType="touchUpInside" id="UtV-Ru-T09"/>
                                 </connections>
                             </button>
                         </subviews>

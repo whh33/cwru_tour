@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     
-    self.entity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
+    self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -103,7 +103,7 @@
         BuildingDescriptionViewController *bdVC = [segue destinationViewController];
         
         bdVC.fetchedResultsController = self.fetchedResultsController;
-        bdVC.entity = self.entity;
+        bdVC.buildingEntity = self.buildingEntity;
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -111,19 +111,16 @@
         if (![context save:&error]) {
             NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
         }
-        [fetchRequest setEntity:self.entity];
+        [fetchRequest setEntity:self.buildingEntity];
         NSIndexPath *path = [NSIndexPath indexPathForRow:[self.tableView indexPathForSelectedRow].row inSection:0];
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
         NSString *buildingName = cell.textLabel.text;
-        NSArray *allObjects = [context executeFetchRequest:fetchRequest error:&error];
-        NSManagedObject *fetchedObject;
         
-        for (NSManagedObject *object in allObjects) {
-            if ([object valueForKey:@"name"] == buildingName) {
-                fetchedObject = object;
-                break;
-            }
-        }
+        NSPredicate *byName = [NSPredicate predicateWithFormat:@"name == %@",buildingName];
+        [fetchRequest setPredicate:byName];
+        
+        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        NSManagedObject *fetchedObject = array[0];
         
         bdVC.instanceIndividual = fetchedObject;
     }
@@ -140,10 +137,10 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     //NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
-    self.entity = entity;
+    NSEntityDescription *buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
+    self.buildingEntity = buildingEntity;
     
-    [fetchRequest setEntity:entity];
+    [fetchRequest setEntity:buildingEntity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];

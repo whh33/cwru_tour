@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "BuildingsViewController.h"
+#import "TourViewController.h"
 #import "Building.h"
 
 @implementation AppDelegate
@@ -24,8 +25,12 @@
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UINavigationController *navigationController = tabBarController.viewControllers[3];
-    BuildingsViewController *controller = (BuildingsViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    BuildingsViewController *bvController = (BuildingsViewController *)navigationController.topViewController;
+    bvController.managedObjectContext = self.managedObjectContext;
+    
+//    navigationController = tabBarController.viewControllers[1];
+//    TourViewController *tvController = (BuildingsViewController *) navigationController.topViewController;
+//    tvController.managedObjectContext = self.managedObjectContext;
 
     return YES;
 }
@@ -77,13 +82,18 @@
 #pragma - loadfile
 - (NSURL *)buildingListFileDirectory
 {
-    //return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"buildingList" withExtension:@"txt"];
     return url;
 }
 
+- (NSURL *)routesListFileDirectory
+{
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"routesList" withExtension:@"txt"];
+    return url;
+}
 
-- (void)initDatabaseFromURL:(NSURL*)url
+
+- (void)initBuildingDatabaseFromURL:(NSURL*)url
 {
     NSError *error;
     // read everything from text
@@ -99,22 +109,64 @@
     
     //then for each line create a record in your database
     NSManagedObjectContext *context = self.managedObjectContext;
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     
     //for (int i = 1, i < [allLineStrings count], i++) {
     for (NSString *currentLine in allLinedStrings) {
         //NSString *currentLine = [allLinedStrings objectAtIndex:i];
         NSArray *record = [currentLine componentsSeparatedByString:@"^"];
         
-        NSManagedObject *newBuilding = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+        NSManagedObject *newBuilding = [[NSManagedObject alloc] initWithEntity:buildingEntity insertIntoManagedObjectContext:context];
         
         NSString *buildingName = record[0];
-        NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithString:record[1]];
-        NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithString:record[2]];
+        NSDecimalNumber *latitude = [NSDecimalNumber decimalNumberWithString:record[1]];
+        NSDecimalNumber *longitude = [NSDecimalNumber decimalNumberWithString:record[2]];
         
         [newBuilding setValue:buildingName forKey:@"name"];
         [newBuilding setValue:longitude forKey:@"longitude"];
         [newBuilding setValue:latitude forKey:@"latitude"];
+    }
+    
+    // Save the context.
+    error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+- (void)initRouteDatabaseFromURL:(NSURL*)url
+{
+    NSError *error;
+    // read everything from text
+    NSString * fileContents =[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+    //trim the last newline charater
+    fileContents = [fileContents stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    // first, separate by new line
+    NSMutableArray *allLinedStrings =
+    [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    [allLinedStrings removeObjectAtIndex:0];
+    
+    //NSArray *allLinedStrings =[fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    
+    //then for each line create a record in your database
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSEntityDescription *routeEntity = [NSEntityDescription entityForName:@"Route" inManagedObjectContext:self.managedObjectContext];
+    
+    //for (int i = 1, i < [allLineStrings count], i++) {
+    for (NSString *currentLine in allLinedStrings) {
+        //NSString *currentLine = [allLinedStrings objectAtIndex:i];
+        NSArray *record = [currentLine componentsSeparatedByString:@"^"];
+        
+        NSManagedObject *newRoute = [[NSManagedObject alloc] initWithEntity:routeEntity insertIntoManagedObjectContext:context];
+        
+        NSString *routeName = record[0];
+        NSString *buildingsInRoute = record[1];
+        
+        [newRoute setValue:routeName forKey:@"name"];
+        [newRoute setValue:buildingsInRoute forKey:@"buildingsInRoute"];
     }
     
     // Save the context.
@@ -152,7 +204,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"BuildingDatabase" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Building" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -206,7 +258,10 @@
     if(!alreadyRan){
         
         NSURL* url = [self buildingListFileDirectory];
-        [self initDatabaseFromURL:url];
+        [self initBuildingDatabaseFromURL:url];
+        
+        url = [self routesListFileDirectory];
+        [self initRouteDatabaseFromURL:url];
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"alreadyRan"];
         [[NSUserDefaults standardUserDefaults] synchronize];

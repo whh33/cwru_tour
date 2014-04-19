@@ -35,6 +35,7 @@ CLLocationCoordinate2D startPoint;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     self.waypoints = [NSMutableArray array];
     self.waypointStrings = [NSMutableArray array];
     
@@ -72,11 +73,45 @@ CLLocationCoordinate2D startPoint;
 }
 
 -(void) createLandmarkObjects{
-    Landmark *fijiHouse = [[Landmark alloc] initWithTitle:@"Fiji House" latitude: 41.511217 longitude: -81.606697];
-    Landmark *wadeCommons = [[Landmark alloc] initWithTitle:@"Wade Commons" latitude:41.5133020 longitude:-81.605268];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    [fetchRequest setEntity:self.buildingEntity];
+
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
     self.landmarksOnRoute = [[NSMutableArray alloc] init];
-    [self.landmarksOnRoute addObject:fijiHouse];
-    [self.landmarksOnRoute addObject:wadeCommons];
+    
+    NSString *allBuildingsInRoute = [self.instanceIndividual valueForKey:@"buildingsInRoute"];
+    NSArray *record = [allBuildingsInRoute componentsSeparatedByString:@","];
+    
+    for (NSString *value in record) {
+        NSString *buildingName = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSPredicate *byName = [NSPredicate predicateWithFormat:@"name == %@",buildingName];
+        [fetchRequest setPredicate:byName];
+        
+        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        NSManagedObject *fetchedObject = array[0];
+        
+        double longitude = [[fetchedObject valueForKey:@"longitude"] doubleValue];
+        double latitude = [[fetchedObject valueForKey:@"latitude"] doubleValue];
+        
+        //NSLog(@"%@ %f %f",buildingName, longitude, latitude);
+        
+        Landmark *temp = [[Landmark alloc] initWithTitle:buildingName latitude:latitude longitude:longitude];
+        [self.landmarksOnRoute addObject:temp];
+    }
+    
+//    Landmark *fijiHouse = [[Landmark alloc] initWithTitle:@"Fiji House" latitude: 41.511217 longitude: -81.606697];
+//    Landmark *wadeCommons = [[Landmark alloc] initWithTitle:@"Wade Commons" latitude:41.5133020 longitude:-81.605268];
+//    Landmark *nrv = [[Landmark alloc] initWithTitle:@"NRV" latitude:41.514217 longitude:-81.604268];
+//    self.landmarksOnRoute = [[NSMutableArray alloc] init];
+//    [self.landmarksOnRoute addObject:nrv];
+//    [self.landmarksOnRoute addObject:fijiHouse];
+//    [self.landmarksOnRoute addObject:wadeCommons];
 }
 
 -(void)loadRoute{

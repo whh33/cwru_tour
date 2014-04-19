@@ -1,4 +1,159 @@
-Building Name^Longitude^Latitude
+Building Name^Latitude (km) (N)^Longitude (km) (W)
+1-2-1 Fitness Center^41.503035^-81.605535
+A.W. Smith Building^41.502937^-81.606897
+Access Services^41.504573^-81.609816
+Adelbert Gym^41.503096^-81.605928
+Allen Memorial Medical Library^41.505949^-81.608433
+Alpha Chi Omega^41.51181^-81.605437
 Alpha Phi^41.514146^-81.607832
+Alumni House^41.511689^-81.60695
+Alumni House (Dorm)^41.50059^-81.602488
+Amasa Stone Chapel^41.504913^-81.609036
+Art Studio^41.50188^-81.603069
+Barking Spider^41.51147^-81.60672
+Bellflower Care Center^41.511492^-81.604901
+Bellflower Hall^41.511954^-81.605245
+Beta Theta Pi^41.502579^-81.601628
+Binary Walkway (middle)^41.505338^-81.60886
+Bingham Building^41.502381^-81.606914
+BioEnterprise^41.499112^-81.607453
+Biomedical Research Building (Lois Stokes Health Sciences Center?)^41.504972^-81.604373
+Campus Bookstore / Barnes and Noble^41.509885^-81.604357
 Carlton Commons^41.500178^-81.601827
+Carlton Courts^41.501815^-81.598915
+Carriage House^41.511029^-81.604798
+Case Alumni Association (in Tomlinson Hall)^41.504053^-81.609647
+Church of the Covenant^41.508483^-81.607159
+Clapp Hall^41.503864^-81.606842
+Clark Hall^41.508955^-81.607496
+Clarke Tower^41.51454^-81.605597
+Cleveland Botanical Garden^41.510465^-81.610187
+Cleveland Hillel Foundation^41.508945^-81.606811
+Cleveland Institute of Art^41.509364^-81.609574
+Joseph McCullough Center for Visual Arts (CIA -> Google Maps)^41.510383^-81.602351
+Cleveland Institute of Music^41.512211^-81.608944
+Cleveland Museum of Art^41.508917^-81.611365
+Cleveland Museum of Natural History^41.511588^-81.613343
+Coffee House at University Circle^41.511503^-81.607226
+Crawford Hall (contains Access Services, College of Arts & Sciences, and Inamori Center)^41.504573^-81.609816
+Cutler House^41.514218^-81.605254
+Cutter House^41.51228^-81.607935
+DeGrace Hall^41.50425^-81.60714
+Delta Gamma^41.502228^-81.601383
+Delta Sigma Delta^41.51127^-81.606182
+Delta Tau Delta^41.513869^-81.607133
+Delta Upsilon (shares with Phi Kappa Psi)^41.501549^-81.600906
+Denison Hall (in/other name for Wade Commons)^41.513046^-81.605213
+Dental School^41.505421^-81.60315
+Diner (Denny's)^41.512005^-81.606039
+Dittrick Museum (of Medical History) (shares with Allen Memorial Medical Library)^41.505949^-81.608433
+Dively Building (Geors S.)^41.510202^-81.606552
+Eldred Hall^41.504012^-81.607877
+Elephant Stairs^41.5008277^-81.601885
+Football Field (Case Fields)^41.513434^-81.603597
+Frances Payne Bolton School of Nursing^41.505404^-81.603898
+Free Medical Center of Cleveland (The Free Medical Clinic Of Greater Cleveland)^41.514383^-81.599054
+Freiberger Field (CLOSED)^41.508072^-81.609574
+Fribley Commons^41.501075^-81.602709
+Glaser House^41.50048^-81.600591
+Glennan Building^41.501525^-81.607206
+Glidden House^41.51093^-81.607874
+Guest House (Barry House)^41.501176^-81.599764
+Guilford House^41.508616^-81.608205
+Gund Hall (contains the Law School)^41.510291^-81.608757
+Hallinan Center^41.508613^-81.606389
+Harcourt House (President's House?)^41.500375^-81.598353
+Harkness Chapel^41.509339^-81.607502
+Haydn Hall^41.508609^-81.607655
+Health Services Building^41.503318^-81.604955
+Hitchcock House^41.513918^-81.604995
+Hovorka Atrium (same as Clapp)^41.503864^-81.606842
+Howe House^41.500858^-81.602228
+ITS CARE Center (Computer Service Center)^41.51147^-81.604905
+Mandel School of Applied Social Sciences^41.510567^-81.607141
+Jolly Scholar (contained by Thwing)^41.507517^-81.608244
+Kappa Alpha Theta on E (shares with Sig Psi on W?)^41.501696^-81.600107
+Kelvin Smith Library^41.507375^-81.60962
+Kent Hale Smith Building^41.503292^-81.606626
+Kusch House^41.500765^-81.600116
+L'Albatros^41.511742^-81.606393
+Law School (contained by Gund Hall)^41.510291^-81.608757
+Leutner Commons^41.513506^-81.60592
+Lincoln Storage^41.500565^-81.605709
+Mandel Center for Nonprofit Organizations^41.510981^-81.605572
+Mather Park^41.515084^-81.60619
+Michelson House^41.5003^-81.60111
+Millis Hall (next to clapp, degrace, etc)^41.50416^-81.607512
+Morley Building^41.503763^-81.607435
+Museum of Contemporary Art^41.508916^-81.604748
+Musselman Quadrangle (not very relevant...)^41.504306^-81.608446
+Nobby's Ballpark^41.515291^-81.603896
+Nord Hall^41.502526^-81.607868
+North Campus Security Office (Campus Security)^41.511915^-81.606726
+Norton House^41.513107^-81.605775
 Olin Building^41.50217^-81.607834
+Park Lane Villa^41.506402^-81.614865
+Pathology Building^41.505^-81.606
+Peter B. Lewis Building^41.509979^-81.607886
+Phi Delta Theta^41.502919^-81.601396
+Phi Gamma Delta^41.510946^-81.606623
+Phi Kappa Psi (shares with Delta Ups)^41.501549^-81.600906
+Phi Kappa Tau^41.501348^-81.600657
+Phi Kappa Theta^41.514254^-81.609315
+Phi Mu^41.511359^-81.605012
+Phi Sigma Rho (? under trees)^41.501112^-81.601154
+Pierce House^41.513827^-81.60548
+Power House^41.503576^-81.604214
+Protective Services Satellite^41.511988^-81.605756
+Raymond House^41.512581^-81.605227
+Robbins Building^41.504611^-81.603511
+Rockefeller Building^41.50364^-81.607834
+Schmitt Auditorium (more SE than Millis Hall; between Millis and Clap/DeGrace/etc.)^41.503887^-81.607095
+Scholars House (under trees, may share with Phi Sigma Rho)^41.501116^-81.601159
+Sears Library^41.502691^-81.608233
+Sears Tower^41.50432^-81.603975
+Service Building^41.503991^-81.603862
+Severance Hall^41.506295^-81.609376
+Sherman House^41.512723^-81.605758
+Sigma Chi (shares with Phi Kappa Tau)^41.502919^-81.601396
+Sigma Nu^41.502635^-81.6011
+Sigma Phi Epsilon^41.502435^-81.601771
+Sigma Psi on W (shares with Kappa Alpha Theta on E?)^41.501784^-81.600287
+Smith House^41.512343^-81.607468
+Staley House^41.500034^-81.602713
+Starbucks (Village @ 115)^41.512431^-81.604483
+Stone Commons^41.512702^-81.60764
+Storrs House^41.51403^-81.60599
+Strosacker Auditorium^41.503323^-81.607366
+Taft House^41.512602^-81.607087
+Taplin House^41.512936^-81.607185
+The Temple - Tifereth Israel^41.5093^-81.618008
+Theta Chi^41.513614^-81.606956
+Thwing Center^41.507406^-81.608327
+Tinkham Veale University Center^41.508043^-81.609245
+Tippit House^41.500582^-81.602884
+Toby Plaza^41.509309^-81.604179
+Tomlinson Hall^41.504053^-81.609647
+Tyler House^41.51284^-81.606177
+University Circle United Mehodist Church^41.505913^-81.612595
+Uptown^41.509772^-81.603654
+Van Horn Field^41.501918^-81.606151
+Veale Center^41.500865^-81.606607
+Village 115 House 1^41.512469^-81.603179
+Village 115 House 2^41.512029^-81.603267
+Village 115 House 3a^41.512491^-81.604131
+Village 115 House 3b^41.512369^-81.603751
+Village 115 House 4^41.512809^-81.604428
+Village 115 House 5^41.513409^-81.604438
+Village 115 House 6 and 7^41.514358^-81.604431
+Wade Commons^41.513043^-81.605202
+Wade Lagoon^41.506047^-81.611156
+White Building^41.501913^-81.607493
+Wickenden Building^41.501913^-81.607493
+Wolstein Hall^41.510662^-81.605974
+Wolstein Research Building^41.506404^-81.603225
+Wood Building^41.504288^-81.604765
+Wood Research Tower (in Wood)^41.504062^-81.605018
+Yost Hall^41.503572^-81.609018
+Zeta Beta Tau^41.514012^-81.607494
+Zeta Psi^41.501872^-81.60064

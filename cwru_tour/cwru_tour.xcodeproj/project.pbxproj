@@ -14,6 +14,8 @@
 		2EDDD05A1900D13600A581E6 /* Building.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD0581900D13600A581E6 /* Building.xcdatamodeld */; };
 		2EDDD05B1900D7C600A581E6 /* Building.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 2EDDD0581900D13600A581E6 /* Building.xcdatamodeld */; };
 		2EDDD0641900E9F600A581E6 /* BuildingDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD0631900E9F600A581E6 /* BuildingDescriptionViewController.m */; };
+		2EDDD0661901ECCD00A581E6 /* routesList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2EDDD0651901ECCD00A581E6 /* routesList.txt */; };
+		2EDDD0691901F4CD00A581E6 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD0681901F4CD00A581E6 /* Route.m */; };
 		2EEAD45618FF46EE0075274E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEAD45518FF46EE0075274E /* GoogleMaps.framework */; };
 		2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2EEAD45718FF471C0075274E /* GoogleMaps.bundle */; };
 		2EEAD45A18FF472B0075274E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEAD45918FF472B0075274E /* AVFoundation.framework */; };
@@ -87,6 +89,9 @@
 		2EDDD0591900D13600A581E6 /* Building.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Building.xcdatamodel; sourceTree = "<group>"; };
 		2EDDD0621900E9F600A581E6 /* BuildingDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildingDescriptionViewController.h; path = ../BuildingDescriptionViewController.h; sourceTree = "<group>"; };
 		2EDDD0631900E9F600A581E6 /* BuildingDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuildingDescriptionViewController.m; path = ../BuildingDescriptionViewController.m; sourceTree = "<group>"; };
+		2EDDD0651901ECCD00A581E6 /* routesList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = routesList.txt; sourceTree = "<group>"; };
+		2EDDD0671901F4CD00A581E6 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		2EDDD0681901F4CD00A581E6 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		2EEAD45518FF46EE0075274E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		2EEAD45718FF471C0075274E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		2EEAD45918FF472B0075274E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -259,6 +264,7 @@
 				6570268E18C1518300B3E41D /* Second Tier */,
 				651D671918B925F20017A465 /* AppDelegate.h */,
 				651D671A18B925F20017A465 /* AppDelegate.m */,
+				2EDDD0651901ECCD00A581E6 /* routesList.txt */,
 				2EDDD0551900C39E00A581E6 /* buildingList.txt */,
 				2EDDD0581900D13600A581E6 /* Building.xcdatamodeld */,
 				651D671C18B925F20017A465 /* Main.storyboard */,
@@ -345,6 +351,8 @@
 				2EEAD48218FF5E9D0075274E /* MDDirectionService.m */,
 				65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */,
 				65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */,
+				2EDDD0671901F4CD00A581E6 /* Route.h */,
+				2EDDD0681901F4CD00A581E6 /* Route.m */,
 				6570268F18C15C8200B3E41D /* TourViewController.h */,
 				6570269018C15C8200B3E41D /* TourViewController.m */,
 				65CB7D7B18CB9A84008CA02E /* FreeRoamViewController.h */,
@@ -460,6 +468,7 @@
 				2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */,
 				65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */,
 				2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */,
+				2EDDD0661901ECCD00A581E6 /* routesList.txt in Resources */,
 				6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */,
 				65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */,
 				2EEAD47B18FF4ED30075274E /* newLocation.gpx in Resources */,
@@ -492,6 +501,7 @@
 				2EDDD0641900E9F600A581E6 /* BuildingDescriptionViewController.m in Sources */,
 				65DADED118FF05A600C124CC /* ClevelandInfoViewController.m in Sources */,
 				65DADED718FF060300C124CC /* MissionInfoViewController.m in Sources */,
+				2EDDD0691901F4CD00A581E6 /* Route.m in Sources */,
 				65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */,
 				651D674118BA70800017A465 /* BuildingsViewController.m in Sources */,
 				2EEAD48318FF5E9D0075274E /* MDDirectionService.m in Sources */,

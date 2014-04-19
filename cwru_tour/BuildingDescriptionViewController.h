@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSEntityDescription *entity;
+@property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
