@@ -75,25 +75,6 @@
             </objects>
             <point key="canvasLocation" x="1306" y="-2418"/>
         </scene>
-        <!--View Controller - Sign Up-->
-        <scene sceneID="cLl-kS-4XZ">
-            <objects>
-                <viewController id="FGq-X7-QsD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WcE-a8-48P"/>
-                        <viewControllerLayoutGuide type="bottom" id="cBr-DU-X4x"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s0W-dr-bZ8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sign Up" id="yJp-TA-jps"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vwQ-uE-TOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1328" y="-1719"/>
-        </scene>
         <!--About Info View Controller - About CWRU-->
         <scene sceneID="7IU-wt-XyE">
             <objects>
@@ -468,7 +449,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eJg-JW-ZcZ">
-                        <barButtonItem key="rightBarButtonItem" title="Go" id="3HI-8T-iR8">
+                        <barButtonItem key="rightBarButtonItem" title="Directions To Building" id="3HI-8T-iR8">
                             <connections>
                                 <segue destination="kAs-ra-xtc" kind="push" identifier="directions" id="uTj-pd-9JP"/>
                             </connections>

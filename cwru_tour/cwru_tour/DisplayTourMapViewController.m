@@ -19,6 +19,7 @@
 
 @implementation DisplayTourMapViewController{
    bool firstLocationUpdate;
+    CLLocationCoordinate2D startPoint;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,10 +30,6 @@
     }
     return self;
 }
-
-
-CLLocationCoordinate2D startPoint;
-
 
 - (void)viewDidLoad
 {
@@ -57,15 +54,41 @@ CLLocationCoordinate2D startPoint;
     self.mapView.settings.myLocationButton = YES;
     self.mapView.delegate = self;
     self.view = self.mapView;
-   
+    // Listen to the myLocation property of GMSMapView.
+    [self.mapView addObserver:self
+                   forKeyPath:@"myLocation"
+                      options:NSKeyValueObservingOptionNew
+                      context:NULL];
+
     //call methods to draw route and set annotations
-    [self updateCurrentLocation];
+    //[self updateCurrentLocation];
     [self createLandmarkObjects];
     
     
-    [self loadRoute];
+    //[self loadRoute];
+}
+- (void)dealloc {
+    [self.mapView removeObserver:self
+                      forKeyPath:@"myLocation"
+                         context:NULL];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    if (!firstLocationUpdate) {
+        // If the first location update has not yet been recieved, then jump to that
+        // location.
+        firstLocationUpdate = YES;
+        CLLocation *location = [change objectForKey:NSKeyValueChangeNewKey];
+        self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
+                                                             zoom:14];
+        startPoint=CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
+        [self loadRoute];
+    }
+}
+/*
 - (void)updateCurrentLocation {
     BOOL tourAlreadyRan = [[NSUserDefaults standardUserDefaults] boolForKey:@"tourAlreadyRan"];
     
@@ -86,6 +109,7 @@ CLLocationCoordinate2D startPoint;
     }
     [self.mapView animateToLocation:currentLocation];
 }
+*/
 
 -(void) createLandmarkObjects{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -197,7 +221,7 @@ CLLocationCoordinate2D startPoint;
 
 -(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
     CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
-    
+    infoWindow.buildingInfo.backgroundColor = [UIColor clearColor];
     [infoWindow.buildingInfo setText:marker.title];
     return infoWindow;
 }
