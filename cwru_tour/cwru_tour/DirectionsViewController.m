@@ -33,7 +33,7 @@
     //start map setup
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[self.latitude doubleValue]
                                                             longitude:[self.longitude doubleValue]
-                                                                 zoom:13];
+                                                                 zoom:15];
     
     self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     self.mapView.myLocationEnabled = YES;
@@ -84,7 +84,7 @@
         firstLocationUpdate_ = YES;
         location = [change objectForKey:NSKeyValueChangeNewKey];
         self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
-                                                        zoom:14];
+                                                        zoom:17];
             [self loadRoute];
     }
 }

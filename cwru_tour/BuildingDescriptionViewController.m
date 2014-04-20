@@ -46,7 +46,7 @@
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[self.instanceIndividual
                                                                         valueForKey:@"Latitude"] doubleValue]
                                                             longitude:[[self.instanceIndividual valueForKey:@"Longitude"] doubleValue]
-                                                                 zoom:15];
+                                                                 zoom:17];
     
     mapView_ = [GMSMapView mapWithFrame:frame camera:camera];
     mapView_.autoresizingMask = UIViewAutoresizingFlexibleWidth |
