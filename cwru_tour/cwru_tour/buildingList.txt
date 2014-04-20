@@ -1,5 +1,5 @@
 Building Name^Latitude^Longitude^waypointLat^waypointLon^Description
-1-2-1 Fitness Center^41.503035^-81.605535^41.503246^-81.605387^something here
+1-2-1 Fitness Center^41.503035^-81.605535^41.503246^-81.605387^workout gym that costs money
 A.W. Smith Building^41.502937^-81.606897^41.502825^-81.607114^something here
 Access Services^41.504573^-81.609816^something here
 Adelbert Gym^41.503096^-81.605928^something here

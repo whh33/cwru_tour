@@ -7,6 +7,7 @@
 //
 
 #import "BuildingDescriptionViewController.h"
+#import "DirectionsViewController.h"
 
 @interface BuildingDescriptionViewController ()
 
@@ -33,7 +34,7 @@
     [self.name sizeToFit];
     
     self.description.text = [self.instanceIndividual valueForKey:@"longDescription"];
-    
+   
     
     //[self.view addSubview:myView];
     
@@ -52,5 +53,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *) segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"directions"]) {
+        DirectionsViewController *directionsViewController = [segue destinationViewController];
+        
+        directionsViewController.latitude = [self.instanceIndividual valueForKey:@"Latitude"];
+        directionsViewController.longitude= [self.instanceIndividual valueForKey:@"Longitude"];
+        directionsViewController.title = [self.instanceIndividual valueForKey:@"name"];
+    }
+}
+
 
 @end

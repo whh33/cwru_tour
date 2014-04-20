@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-
 @interface BuildingDescriptionViewController : UIViewController <NSFetchedResultsControllerDelegate>
+
+
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
 
+
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *description;
+@property (weak, nonatomic) IBOutlet UITextView *description;
+
 @end
