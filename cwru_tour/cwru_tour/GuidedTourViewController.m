@@ -230,4 +230,6 @@
     }
 }
 
+- (IBAction)displayAnnotation:(id)sender {
+}
 @end

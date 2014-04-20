@@ -20,6 +20,8 @@
 @implementation DisplayTourMapViewController{
    bool firstLocationUpdate;
     CLLocationCoordinate2D startPoint;
+    NSInteger landmarkCount;
+    bool firstTime;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -139,19 +141,11 @@
         double waypointLatitude = [[fetchedObject valueForKey:@"waypointLat"] doubleValue];
         double annotationLongitude= [[fetchedObject valueForKey:@"longitude"] doubleValue];
         double annotationLatitude= [[fetchedObject valueForKey:@"latitude"] doubleValue];
-        //NSLog(@"%@ %f %f",buildingName, longitude, latitude);
         
         Landmark *temp = [[Landmark alloc] initWithTitle:buildingName waypointLatitude:waypointLatitude waypointLongitude:waypointLongitude annotationLatitude:annotationLatitude annotationLongitude:annotationLongitude];
         [self.landmarksOnRoute addObject:temp];
     }
-    
-//    Landmark *fijiHouse = [[Landmark alloc] initWithTitle:@"Bingham" waypointLatitude:41.502582 waypointLongitude:-81.607177 annotationLatitude:41.502582 annotationLongitude:-81.607177];
-//    Landmark *wadeCommons = [[Landmark alloc] initWithTitle:@"KSL" waypointLatitude:41.506913 waypointLongitude:-81.608848 annotationLatitude: 41.506913 annotationLongitude: -81.608848];
-//    Landmark *nrv = [[Landmark alloc] initWithTitle:@"Leutner Commons" waypointLatitude:41.513345 waypointLongitude:-81.605823 annotationLatitude: 41.513345 annotationLongitude:-81.605823];
-//    self.landmarksOnRoute = [[NSMutableArray alloc] init];
-//    [self.landmarksOnRoute addObject:nrv];
-//    [self.landmarksOnRoute addObject:fijiHouse];
-//    [self.landmarksOnRoute addObject:wadeCommons];
+
 }
 
 -(void)loadRoute{
@@ -214,8 +208,8 @@
     for(Landmark *landmark in self.landmarksOnRoute){
         GMSMarker *landmarkMarker = [GMSMarker markerWithPosition:[landmark.getAnnotationCoordinateObject MKCoordinateValue]];
         landmarkMarker.title = landmark.getTitle;
-        landmarkMarker.map = _mapView;
-        self.view = _mapView;
+        landmarkMarker.map = self.mapView;
+        self.view = self.mapView;
     }
 }
 
@@ -224,6 +218,39 @@
     infoWindow.buildingInfo.backgroundColor = [UIColor clearColor];
     [infoWindow.buildingInfo setText:marker.title];
     return infoWindow;
+}
+
+-(IBAction)displayAnnotation:(id)sender{
+    NSInteger numLandmarks = self.landmarksOnRoute.count;
+    CLLocation *userLocation = [[CLLocation alloc] init];
+    userLocation = [userLocation initWithLatitude:startPoint.latitude longitude:startPoint.longitude];
+    //check to make sure don't exceed the bounds of the array
+    if(landmarkCount == numLandmarks){
+        landmarkCount=0;
+    }
+    if(!firstTime){
+        firstTime = YES;
+        Landmark *closestLandmark;
+        Landmark *firstLandmarkOnRoute = self.landmarksOnRoute[0];
+        closestLandmark = firstLandmarkOnRoute;
+        CLLocationDistance min = [userLocation distanceFromLocation:firstLandmarkOnRoute.getCLLocation];
+        for(Landmark *currentLandmark in self.landmarksOnRoute){
+            CLLocationDistance distance = [userLocation distanceFromLocation:currentLandmark.getCLLocation];
+            if(distance < min){
+                closestLandmark = currentLandmark;
+                landmarkCount++;
+                min=distance;
+            }
+        }
+    }
+    
+    Landmark *currentLandmarkToAnnotate = self.landmarksOnRoute[landmarkCount];
+    landmarkCount++;
+    GMSMarker *testMarker = [GMSMarker markerWithPosition:[currentLandmarkToAnnotate.getAnnotationCoordinateObject MKCoordinateValue]];
+    testMarker.title = currentLandmarkToAnnotate.getTitle;
+    testMarker.map = (GMSMapView *)self.view;
+    self.mapView.selectedMarker = testMarker;
+    self.view = self.mapView;
 }
 
 - (void)didReceiveMemoryWarning{

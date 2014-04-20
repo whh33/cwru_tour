@@ -20,5 +20,6 @@
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
+- (IBAction)displayAnnotation:(id)sender;
 
 @end

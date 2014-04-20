@@ -50,7 +50,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bDk-Kz-q6c"/>
+                    <navigationItem key="navigationItem" id="bDk-Kz-q6c">
+                        <barButtonItem key="rightBarButtonItem" title="Next Sight" id="tMm-WS-G2K">
+                            <connections>
+                                <action selector="displayAnnotation:" destination="HWU-kr-C04" id="JnC-12-1qb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRQ-ER-jzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

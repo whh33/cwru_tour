@@ -8,12 +8,13 @@
 
 #import "Landmark.h"
 @implementation Landmark
-@synthesize title, landmarkMarker, landmarkPositionString, coordinate, annotationCoordinate;
+@synthesize title, landmarkMarker, landmarkPositionString, coordinate, annotationCoordinate, landmarkLocation;
 
 -(id) initWithTitle: (NSString *) landmarkTitle waypointLatitude: (double) wLat waypointLongitude: (double) wLon annotationLatitude: (double) aLat annotationLongitude: (double) aLon{
     self = [super init];
     if(self){
         title = landmarkTitle;
+        [self setCLLocation:(double)wLat with:(double)wLon];
         [self setCLLocatinCoordinateObject:wLat with:wLon];
         [self setLandmarkMarker];
         [self setAnnotationCLLocationCoordinate: (double)aLat with: (double)aLon];
@@ -21,6 +22,12 @@
         
     }
     return self;
+}
+
+-(void) setCLLocation:(double)latitude with:(double)longitude{
+    CLLocation *location = [[CLLocation alloc] init];
+    location = [location initWithLatitude:latitude longitude:longitude];
+    landmarkLocation = location;
 }
 
 -(void) setLandmarkMarker{
@@ -55,6 +62,10 @@
 
 -(id) getAnnotationCoordinateObject{
     return annotationCoordinate;
+}
+
+-(id)getCLLocation{
+    return landmarkLocation;
 }
 
 @end
