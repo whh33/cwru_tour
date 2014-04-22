@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSString* fastFactsInfo = @"Fast Facts here.";
+    [self.fastFactsTextView setText:fastFactsInfo];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

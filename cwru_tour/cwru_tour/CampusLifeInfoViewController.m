@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSString* campusLifeInfo = @"Campus Life Info here.";
+    [self.campusLifeTextView setText:campusLifeInfo];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

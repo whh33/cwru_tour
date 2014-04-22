@@ -10,4 +10,6 @@
 
 @interface MissionInfoViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView* missionTextView;
+
 @end
