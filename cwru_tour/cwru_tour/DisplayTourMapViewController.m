@@ -88,28 +88,6 @@
         [self loadRoute];
     }
 }
-/*
-- (void)updateCurrentLocation {
-    BOOL tourAlreadyRan = [[NSUserDefaults standardUserDefaults] boolForKey:@"tourAlreadyRan"];
-    
-    if (!tourAlreadyRan) {
-        //pause to allow user to click the allow button
-        sleep(2);
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"tourAlreadyRan"];
-    }
-    
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
-    [locationManager startUpdatingLocation];
-    sleep(1);//pause again to let the location manager time to setup
-    CLLocation *location = [locationManager location];
-    CLLocationCoordinate2D currentLocation = [location coordinate];
-    if(!firstLocationUpdate){
-        startPoint = currentLocation;
-        firstLocationUpdate = YES;
-    }
-    [mapView_ animateToLocation:currentLocation];
-}
-*/
 
 -(void) createLandmarkObjects{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -154,41 +132,14 @@
         NSMutableArray *sourceDestination = [[NSMutableArray alloc] init];
         [sourceDestination addObject:temp1.getWaypointPositionString];
         [sourceDestination addObject:temp2.getWaypointPositionString];
-        //if (self.waypoints.count > 1) {
-            NSDictionary *query = @{ @"sensor" : @"false",
-                                     @"waypoints" : sourceDestination };
-            MDDirectionService *mds = [[MDDirectionService alloc] init];
-            SEL selector = @selector(addDirections:);
-            [mds setDirectionsQuery:query
-                       withSelector:selector
-                       withDelegate:self];
-        //}else{
-        //    NSLog(@"No route created, only %lu", (unsigned long)self.waypoints.count);
-        //}
-    }
-    /*
-    GMSMarker *startMarker = [GMSMarker markerWithPosition:startPoint];
-    [self.waypoints addObject:startMarker];
-    for(Landmark *landmark in self.landmarksOnRoute){
-        [self.waypoints addObject:landmark.getLandmarkMarker];
-    }
-    NSString *startPositionString = [NSString stringWithFormat:@"%f,%f",startPoint.latitude,startPoint.longitude];
-    [self.waypointStrings addObject:startPositionString];
-    for(Landmark *landmark in self.landmarksOnRoute){
-        [self.waypointStrings addObject:landmark.getWaypointPositionString];
-    }
-    if (self.waypoints.count > 1) {
         NSDictionary *query = @{ @"sensor" : @"false",
-                                 @"waypoints" : self.waypointStrings };
+                                     @"waypoints" : sourceDestination };
         MDDirectionService *mds = [[MDDirectionService alloc] init];
         SEL selector = @selector(addDirections:);
         [mds setDirectionsQuery:query
-                   withSelector:selector
-                   withDelegate:self];
-    }else{
-        NSLog(@"No route created, only %lu", (unsigned long)self.waypoints.count);
+                       withSelector:selector
+                       withDelegate:self];
     }
-     */
     [self addMapAnnotation];
     
 }
@@ -212,13 +163,9 @@
 }
 
 -(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
-  
+    //Initialize custom info window.
     CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
-  //  [infoWindow initWithFrame:CGRectMake(0,0,
-   //                                  infoWindow.frame.size.width,infoWindow.frame.size.height)];
-   // [self.view addSubview:infoWindow];
-    infoWindow.buildingInfo.backgroundColor = [UIColor clearColor];
-    
+    //Initialize core data
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSError *error;
@@ -232,7 +179,11 @@
     
     NSArray *object = [context executeFetchRequest:fetchRequest error:&error];
     Building *specificBuilding = object[0];
+    //reposition camera
+    mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
+                                                     zoom:14];
     
+    self.longDescription.text = specificBuilding.longDescription;
     [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;

@@ -16,6 +16,7 @@
 
 //@property (strong, nonatomic) GMSMapView *mapView;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (weak, nonatomic) IBOutlet UITextView *longDescription;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
