@@ -55,6 +55,13 @@
 		6570269418C1601300B3E41D /* AboutInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570269318C1601300B3E41D /* AboutInfoViewController.m */; };
 		6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6570269618C2A64A00B3E41D /* college-photo_8808..jpg */; };
 		65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 65836A5818E06B970002FAD1 /* cwruSunTestPic.png */; };
+		65965F551905E76D00A9FD32 /* freeroam_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F531905E76D00A9FD32 /* freeroam_cwrutour_edited.png */; };
+		65965F561905E76D00A9FD32 /* guided_tour_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F541905E76D00A9FD32 /* guided_tour_cwrutour_edited.png */; };
+		65965F581905E79300A9FD32 /* sign_up_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F571905E79300A9FD32 /* sign_up_cwrutour_edited.png */; };
+		65965F5A1905E8E500A9FD32 /* city_tab_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F591905E8E500A9FD32 /* city_tab_cwrutour.png */; };
+		65965F5C1905E8FA00A9FD32 /* risingsun_tab_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F5B1905E8FA00A9FD32 /* risingsun_tab_cwrutour.png */; };
+		65965F5F1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F5E1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png */; };
+		65965F611905E9AA00A9FD32 /* mappin_tab_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 65965F601905E9AA00A9FD32 /* mappin_tab_cwrutour.png */; };
 		65CB7D7A18CB9A54008CA02E /* GuidedTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */; };
 		65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */; };
 		65D28E9B18F1E5EA00A922E8 /* ksl_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28E9A18F1E5EA00A922E8 /* ksl_cwrutour_edited.png */; };
@@ -144,6 +151,13 @@
 		6570269318C1601300B3E41D /* AboutInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutInfoViewController.m; sourceTree = "<group>"; };
 		6570269618C2A64A00B3E41D /* college-photo_8808..jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "college-photo_8808..jpg"; sourceTree = "<group>"; };
 		65836A5818E06B970002FAD1 /* cwruSunTestPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cwruSunTestPic.png; sourceTree = "<group>"; };
+		65965F531905E76D00A9FD32 /* freeroam_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = freeroam_cwrutour_edited.png; sourceTree = "<group>"; };
+		65965F541905E76D00A9FD32 /* guided_tour_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guided_tour_cwrutour_edited.png; sourceTree = "<group>"; };
+		65965F571905E79300A9FD32 /* sign_up_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_up_cwrutour_edited.png; sourceTree = "<group>"; };
+		65965F591905E8E500A9FD32 /* city_tab_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city_tab_cwrutour.png; sourceTree = "<group>"; };
+		65965F5B1905E8FA00A9FD32 /* risingsun_tab_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = risingsun_tab_cwrutour.png; sourceTree = "<group>"; };
+		65965F5E1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cwrutourlog_tab_cwrutour.png; sourceTree = "<group>"; };
+		65965F601905E9AA00A9FD32 /* mappin_tab_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mappin_tab_cwrutour.png; sourceTree = "<group>"; };
 		65CB7D7818CB9A54008CA02E /* GuidedTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedTourViewController.h; sourceTree = "<group>"; };
 		65CB7D7918CB9A54008CA02E /* GuidedTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedTourViewController.m; sourceTree = "<group>"; };
 		65CB7D7B18CB9A84008CA02E /* FreeRoamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeRoamViewController.h; sourceTree = "<group>"; };
@@ -321,6 +335,10 @@
 		6570269518C2A05000B3E41D /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				65965F5D1905E94800A9FD32 /* Tabs */,
+				65965F571905E79300A9FD32 /* sign_up_cwrutour_edited.png */,
+				65965F531905E76D00A9FD32 /* freeroam_cwrutour_edited.png */,
+				65965F541905E76D00A9FD32 /* guided_tour_cwrutour_edited.png */,
 				65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */,
 				65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */,
 				65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */,
@@ -331,6 +349,17 @@
 				6570269618C2A64A00B3E41D /* college-photo_8808..jpg */,
 			);
 			name = Pictures;
+			sourceTree = "<group>";
+		};
+		65965F5D1905E94800A9FD32 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				65965F601905E9AA00A9FD32 /* mappin_tab_cwrutour.png */,
+				65965F5E1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png */,
+				65965F5B1905E8FA00A9FD32 /* risingsun_tab_cwrutour.png */,
+				65965F591905E8E500A9FD32 /* city_tab_cwrutour.png */,
+			);
+			name = Tabs;
 			sourceTree = "<group>";
 		};
 		65CB7D7518CB9914008CA02E /* BuildingList */ = {
@@ -466,17 +495,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDDD05B1900D7C600A581E6 /* Building.xcdatamodeld in Resources */,
+				65965F5C1905E8FA00A9FD32 /* risingsun_tab_cwrutour.png in Resources */,
 				2EDDD0561900C39E00A581E6 /* buildingList.txt in Resources */,
 				65D28EA918F229FC00A922E8 /* cleveland_cwrutour_edited.png in Resources */,
+				65965F5A1905E8E500A9FD32 /* city_tab_cwrutour.png in Resources */,
 				65D28E9D18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png in Resources */,
 				651D672318B925F20017A465 /* Images.xcassets in Resources */,
 				2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */,
 				65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */,
+				65965F5F1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png in Resources */,
 				2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */,
 				2EDDD0661901ECCD00A581E6 /* routesList.txt in Resources */,
 				6570269718C2A64A00B3E41D /* college-photo_8808..jpg in Resources */,
 				65836A5918E06B970002FAD1 /* cwruSunTestPic.png in Resources */,
+				65965F581905E79300A9FD32 /* sign_up_cwrutour_edited.png in Resources */,
+				65965F611905E9AA00A9FD32 /* mappin_tab_cwrutour.png in Resources */,
+				65965F561905E76D00A9FD32 /* guided_tour_cwrutour_edited.png in Resources */,
 				2EEAD47B18FF4ED30075274E /* newLocation.gpx in Resources */,
+				65965F551905E76D00A9FD32 /* freeroam_cwrutour_edited.png in Resources */,
 				65D28E9F18F21DA500A922E8 /* binary_walkway_cwrutour.png in Resources */,
 				65D28E9B18F1E5EA00A922E8 /* ksl_cwrutour_edited.png in Resources */,
 				651D671518B925F20017A465 /* InfoPlist.strings in Resources */,
