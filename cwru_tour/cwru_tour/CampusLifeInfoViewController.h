@@ -10,4 +10,6 @@
 
 @interface CampusLifeInfoViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView* campusLifeTextView;
+
 @end

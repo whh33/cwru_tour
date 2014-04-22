@@ -10,4 +10,6 @@
 
 @interface ClevelandInfoViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView* clevelandTextView;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface GeneralInfoViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView* generalTextView;
+
 @end
