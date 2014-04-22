@@ -304,7 +304,7 @@
             </objects>
             <point key="canvasLocation" x="2930" y="-217"/>
         </scene>
-        <!--View Controller - CWRU-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -326,7 +326,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="CWRU" image="cwruSunTestPic.png" id="pFM-aU-bBA"/>
+                    <tabBarItem key="tabBarItem" title="" image="cwrutourlog_tab_cwrutour.png" id="pFM-aU-bBA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +377,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tours" image="cwruSunTestPic.png" id="EKB-lm-S3o"/>
+                    <tabBarItem key="tabBarItem" title="Tours" image="mappin_tab_cwrutour.png" id="EKB-lm-S3o"/>
                     <navigationItem key="navigationItem" title="Title" id="eoX-Tv-JSZ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Yer-rt-SMa"/>
                     </navigationItem>
@@ -417,7 +417,7 @@
                             <outlet property="delegate" destination="IZf-39-MoF" id="BPL-Tv-TXR"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Buildings" image="cwruSunTestPic.png" id="cac-9c-GRo"/>
+                    <tabBarItem key="tabBarItem" title="Buildings" image="city_tab_cwrutour.png" id="cac-9c-GRo"/>
                     <navigationItem key="navigationItem" title="Select a Building" id="ckB-oe-Jx9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fc-ee-N67" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,7 +553,7 @@
         <scene sceneID="QhV-ic-vdK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pTt-na-Xsp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="MVK-2T-ocx"/>
+                    <tabBarItem key="tabBarItem" title="About" image="risingsun_tab_cwrutour.png" id="MVK-2T-ocx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o7Q-O2-nmb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -571,10 +571,14 @@
     </scenes>
     <resources>
         <image name="binary_walkway_cwrutour_general.png" width="600" height="184"/>
+        <image name="city_tab_cwrutour.png" width="60" height="60"/>
         <image name="cleveland_cwrutour_edited.png" width="599" height="198"/>
         <image name="cwruSunTestPic.png" width="60" height="60"/>
+        <image name="cwrutourlog_tab_cwrutour.png" width="60" height="60"/>
         <image name="ksl_cwrutour_edited.png" width="598" height="184"/>
+        <image name="mappin_tab_cwrutour.png" width="60" height="60"/>
         <image name="pbl_cwrutour_edited.png" width="550" height="205"/>
+        <image name="risingsun_tab_cwrutour.png" width="60" height="60"/>
         <image name="students_with_church_cwrutour_edited.png" width="600" height="183"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
