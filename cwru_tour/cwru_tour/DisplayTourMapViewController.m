@@ -12,7 +12,7 @@
 #import "CustomInfoWindow.h"
 #import "Building.h"
 
-@interface DisplayTourMapViewController ()
+@interface DisplayTourMapViewController () <GMSMapViewDelegate>
     @property (strong, nonatomic) NSMutableArray *waypoints;
     @property (strong, nonatomic) NSMutableArray *waypointStrings;
     @property(strong, nonatomic) NSMutableArray *landmarksOnRoute;
@@ -23,6 +23,7 @@
     CLLocationCoordinate2D startPoint;
     NSInteger landmarkCount;
     bool firstTime;
+    GMSMapView *mapView_;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,36 +43,32 @@
     self.waypoints = [NSMutableArray array];
     self.waypointStrings = [NSMutableArray array];
     //start map setup
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35.995602
-                                                            longitude:-78.902153
+    CGRect frame = self.view.bounds;
+    frame.size.height = 300 ;
+    frame.origin.y= 130;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35
+                                                            longitude:-78
                                                                  zoom:13];
-    
-    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    self.mapView.myLocationEnabled = YES;
-    self.mapView.mapType = kGMSTypeHybrid;
-    self.mapView.indoorEnabled = YES;
-    self.mapView.accessibilityElementsHidden = NO;
-    self.mapView.settings.scrollGestures = YES;
-    self.mapView.settings.zoomGestures = YES;
-    self.mapView.settings.compassButton = YES;
-    self.mapView.settings.myLocationButton = YES;
-    self.mapView.delegate = self;
-    self.view = self.mapView;
-    // Listen to the myLocation property of GMSMapView.
-    [self.mapView addObserver:self
-                   forKeyPath:@"myLocation"
-                      options:NSKeyValueObservingOptionNew
-                      context:NULL];
+    mapView_ = [GMSMapView mapWithFrame:frame camera:camera];
+    mapView_.autoresizingMask = UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleHeight |
+    UIViewAutoresizingFlexibleBottomMargin;
+    mapView_.mapType = kGMSTypeHybrid;
+    mapView_.myLocationEnabled = YES;
+    mapView_.delegate = self;
 
-    //call methods to draw route and set annotations
-    //[self updateCurrentLocation];
+    // Listen to the myLocation property of GMSMapView.
+    [mapView_ addObserver:self
+               forKeyPath:@"myLocation"
+                  options:NSKeyValueObservingOptionNew
+                  context:NULL];
+    
     [self createLandmarkObjects];
-    
-    
-    //[self loadRoute];
+    [self.view addSubview:mapView_];
 }
+
 - (void)dealloc {
-    [self.mapView removeObserver:self
+    [mapView_ removeObserver:self
                       forKeyPath:@"myLocation"
                          context:NULL];
 }
@@ -85,7 +82,7 @@
         // location.
         firstLocationUpdate = YES;
         CLLocation *location = [change objectForKey:NSKeyValueChangeNewKey];
-        self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
+        mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
                                                              zoom:14];
         startPoint=CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
         [self loadRoute];
@@ -110,7 +107,7 @@
         startPoint = currentLocation;
         firstLocationUpdate = YES;
     }
-    [self.mapView animateToLocation:currentLocation];
+    [mapView_ animateToLocation:currentLocation];
 }
 */
 
@@ -202,15 +199,15 @@
     NSString *overview_route = route[@"points"];
     GMSPath *path = [GMSPath pathFromEncodedPath:overview_route];
     GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-    polyline.map = self.mapView;
+    polyline.map = mapView_;
 }
 
 -(void)addMapAnnotation{
     for(Landmark *landmark in self.landmarksOnRoute){
         GMSMarker *landmarkMarker = [GMSMarker markerWithPosition:[landmark.getAnnotationCoordinateObject MKCoordinateValue]];
         landmarkMarker.title = landmark.getTitle;
-        landmarkMarker.map = self.mapView;
-        self.view = self.mapView;
+        landmarkMarker.map = mapView_;
+        [self.view addSubview:mapView_];
     }
 }
 
@@ -236,7 +233,7 @@
     NSArray *object = [context executeFetchRequest:fetchRequest error:&error];
     Building *specificBuilding = object[0];
     
-    [infoWindow.buildingInfo setText: specificBuilding.longDescription];
+    [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;
 }
@@ -269,9 +266,9 @@
     landmarkCount++;
     GMSMarker *testMarker = [GMSMarker markerWithPosition:[currentLandmarkToAnnotate.getAnnotationCoordinateObject MKCoordinateValue]];
     testMarker.title = currentLandmarkToAnnotate.getTitle;
-    testMarker.map = (GMSMapView *)self.view;
-    self.mapView.selectedMarker = testMarker;
-    self.view = self.mapView;
+    testMarker.map = mapView_;
+    mapView_.selectedMarker = testMarker;
+    [self.view addSubview:mapView_];
 }
 
 - (void)didReceiveMemoryWarning{

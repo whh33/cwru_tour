@@ -12,9 +12,9 @@
 #import <MapKit/MapKit.h>
 #import <CoreData/CoreData.h>
 
-@interface DisplayTourMapViewController : UIViewController <GMSMapViewDelegate,NSFetchedResultsControllerDelegate>
+@interface DisplayTourMapViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) GMSMapView *mapView;
+//@property (strong, nonatomic) GMSMapView *mapView;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
