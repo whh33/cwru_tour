@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import <CoreData/CoreData.h>
 
-@interface FreeRoamViewController : UIViewController
+@interface FreeRoamViewController : UIViewController  <GMSMapViewDelegate,NSFetchedResultsControllerDelegate>
+@property (strong, nonatomic) GMSMapView *mapView;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSEntityDescription *routeEntity;
+@property (strong, nonatomic) NSEntityDescription *buildingEntity;
+@property (strong, nonatomic) NSManagedObject * instanceIndividual;
+
 
 @end

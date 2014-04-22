@@ -8,6 +8,8 @@
 
 #import "TourViewController.h"
 #import "GuidedTourViewController.h"
+#import "FreeRoamViewController.h"
+#import "Landmark.h"
 
 @interface TourViewController ()
 
@@ -84,8 +86,11 @@
 {
     if ([[segue identifier] isEqualToString:@"guided"]) {
         GuidedTourViewController *gtVC = [segue destinationViewController];
-        
         gtVC.managedObjectContext = self.managedObjectContext;
+    }
+    if([[segue identifier] isEqualToString:@"freeRoam"]){
+        FreeRoamViewController *freeRoamViewController = [segue destinationViewController];
+        freeRoamViewController.managedObjectContext = self.managedObjectContext;
     }
 }
 

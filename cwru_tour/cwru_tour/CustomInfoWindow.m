@@ -12,9 +12,12 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    
+    self = [super initWithFrame:frame]; 
     if (self) {
-        // Initialization code
+       // UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self.buildingInfo action:@selector(handleTap:)];
+        
+        //[self.buildingInfo addGestureRecognizer:tap];
     }
     return self;
 }
@@ -27,5 +30,17 @@
     // Drawing code
 }
 */
+/*
+-(void) handleTap:(UITapGestureRecognizer *)sender{
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"Tap");
+    }
+    NSLog(@"Tap out");
+}*/
+
+- (void)processTap:(UIGestureRecognizer *)sender{
+    NSLog(@"Tap");
+}
+
 
 @end

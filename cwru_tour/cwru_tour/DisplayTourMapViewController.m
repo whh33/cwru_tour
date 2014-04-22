@@ -10,6 +10,7 @@
 #import "MDDirectionService.h"
 #import "Landmark.h"
 #import "CustomInfoWindow.h"
+#import "Building.h"
 
 @interface DisplayTourMapViewController ()
     @property (strong, nonatomic) NSMutableArray *waypoints;
@@ -214,9 +215,29 @@
 }
 
 -(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+  
     CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
+  //  [infoWindow initWithFrame:CGRectMake(0,0,
+   //                                  infoWindow.frame.size.width,infoWindow.frame.size.height)];
+   // [self.view addSubview:infoWindow];
     infoWindow.buildingInfo.backgroundColor = [UIColor clearColor];
-    [infoWindow.buildingInfo setText:marker.title];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    [fetchRequest setEntity:self.buildingEntity];
+    
+    NSPredicate *byName = [NSPredicate predicateWithFormat:@"name == %@",marker.title];
+    [fetchRequest setPredicate:byName];
+    
+    NSArray *object = [context executeFetchRequest:fetchRequest error:&error];
+    Building *specificBuilding = object[0];
+    
+    [infoWindow.buildingInfo setText: specificBuilding.longDescription];
+    
     return infoWindow;
 }
 

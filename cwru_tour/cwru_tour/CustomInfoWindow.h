@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomInfoWindow : UIView
+
 @property (weak, nonatomic) IBOutlet UITextView *buildingInfo;
+
 
 @end
