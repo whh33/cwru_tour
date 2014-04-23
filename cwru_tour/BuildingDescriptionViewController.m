@@ -40,7 +40,7 @@
     //initialize map as a section of the view controller
     CGRect frame = self.view.bounds;
     frame.size.height = frame.size.height / 3;
-    frame.origin.y= frame.size.height - 25;
+    frame.origin.y= frame.size.height - 50;
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[self.instanceIndividual
                                                                         valueForKey:@"Latitude"] doubleValue]

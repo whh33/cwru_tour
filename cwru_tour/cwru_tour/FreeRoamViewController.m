@@ -8,12 +8,13 @@
 
 #import "FreeRoamViewController.h"
 #import "Building.h"
-@interface FreeRoamViewController ()
+@interface FreeRoamViewController ()<GMSMapViewDelegate>
 
 @end
 
 @implementation FreeRoamViewController{
     bool firstLocationUpdate;
+    GMSMapView *mapView_;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,31 +50,30 @@
 //    self.fetchedResultsController = aFetchedResultsController;
     
     //start map setup
-    
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35.995602
-                                                            longitude:-78.902153
+    CGRect frame = self.view.bounds;
+    frame.size.height = 360 ;
+    frame.origin.y= 160;
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35
+                                                            longitude:-78
                                                                  zoom:13];
+    mapView_ = [GMSMapView mapWithFrame:frame camera:camera];
+    mapView_.autoresizingMask = UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleHeight |
+    UIViewAutoresizingFlexibleBottomMargin;
+    mapView_.mapType = kGMSTypeHybrid;
+    mapView_.myLocationEnabled = YES;
+    mapView_.delegate = self;
     
-    self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    self.mapView.myLocationEnabled = YES;
-    self.mapView.mapType = kGMSTypeHybrid;
-    self.mapView.indoorEnabled = YES;
-    self.mapView.accessibilityElementsHidden = NO;
-    self.mapView.settings.scrollGestures = YES;
-    self.mapView.settings.zoomGestures = YES;
-    self.mapView.settings.compassButton = YES;
-    self.mapView.settings.myLocationButton = YES;
-    self.mapView.delegate = self;
-    self.view = self.mapView;
     // Listen to the myLocation property of GMSMapView.
-    [self.mapView addObserver:self
-                   forKeyPath:@"myLocation"
-                      options:NSKeyValueObservingOptionNew
-                      context:NULL];
+    [mapView_ addObserver:self
+               forKeyPath:@"myLocation"
+                  options:NSKeyValueObservingOptionNew
+                  context:NULL];
+    [self.view addSubview:mapView_];
     [self loadAnnotations];
 }
 - (void)dealloc {
-    [self.mapView removeObserver:self
+    [mapView_ removeObserver:self
                       forKeyPath:@"myLocation"
                          context:NULL];
 }
@@ -87,7 +87,7 @@
         // location.
         firstLocationUpdate = YES;
         CLLocation *location = [change objectForKey:NSKeyValueChangeNewKey];
-        self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
+        mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
                                                              zoom:14];
     }
 }
@@ -103,11 +103,36 @@
     for (Building *building in results) {
         GMSMarker *buildingMarker = [GMSMarker markerWithPosition:(CLLocationCoordinate2DMake([building.latitude doubleValue], [building.longitude doubleValue]))];
         buildingMarker.title = building.name;
-        buildingMarker.map  = self.mapView;
-        self.view = self.mapView;
+        buildingMarker.map  = mapView_;
+        [self.view addSubview:mapView_];
     }
 
 }
+
+-(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+    //Initialize core data
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    [fetchRequest setEntity:self.buildingEntity];
+    
+    NSPredicate *byName = [NSPredicate predicateWithFormat:@"name == %@",marker.title];
+    [fetchRequest setPredicate:byName];
+    
+    NSArray *object = [context executeFetchRequest:fetchRequest error:&error];
+    Building *specificBuilding = object[0];
+    //reposition camera
+    mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
+                                                     zoom:14];
+    
+    self.longDescription.text = specificBuilding.longDescription;
+    
+    return nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

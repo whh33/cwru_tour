@@ -12,13 +12,13 @@
 #import <MapKit/MapKit.h>
 #import <CoreData/CoreData.h>
 
-@interface FreeRoamViewController : UIViewController  <GMSMapViewDelegate,NSFetchedResultsControllerDelegate>
-@property (strong, nonatomic) GMSMapView *mapView;
+@interface FreeRoamViewController : UIViewController  <NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
+@property (weak, nonatomic) IBOutlet UITextView *longDescription;
 
 
 @end

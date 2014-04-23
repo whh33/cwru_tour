@@ -44,8 +44,8 @@
     self.waypointStrings = [NSMutableArray array];
     //start map setup
     CGRect frame = self.view.bounds;
-    frame.size.height = 300 ;
-    frame.origin.y= 130;
+    frame.size.height = 360 ;
+    frame.origin.y= 160;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:35
                                                             longitude:-78
                                                                  zoom:13];
