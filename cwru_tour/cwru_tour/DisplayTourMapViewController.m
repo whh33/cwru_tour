@@ -26,8 +26,7 @@
     GMSMapView *mapView_;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -35,8 +34,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     //declare core data and local arrays
     self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
@@ -125,7 +123,6 @@
 }
 
 -(void)loadRoute{
-    
     for(int i=0; i< self.landmarksOnRoute.count -1; i++){
         Landmark *temp1 = self.landmarksOnRoute[i];
         Landmark *temp2 = self.landmarksOnRoute[i+1];
@@ -184,6 +181,7 @@
                                                      zoom:14];
     
     self.longDescription.text = specificBuilding.longDescription;
+    infoWindow.buildingInfo.textColor= [UIColor blueColor];
     [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;
