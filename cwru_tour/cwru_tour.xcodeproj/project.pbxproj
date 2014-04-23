@@ -66,7 +66,6 @@
 		65CB7D7D18CB9A84008CA02E /* FreeRoamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */; };
 		65D28E9B18F1E5EA00A922E8 /* ksl_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28E9A18F1E5EA00A922E8 /* ksl_cwrutour_edited.png */; };
 		65D28E9D18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28E9C18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png */; };
-		65D28E9F18F21DA500A922E8 /* binary_walkway_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28E9E18F21DA500A922E8 /* binary_walkway_cwrutour.png */; };
 		65D28EA518F222CA00A922E8 /* pbl_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */; };
 		65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */; };
 		65D28EA918F229FC00A922E8 /* cleveland_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */; };
@@ -75,6 +74,7 @@
 		65D4CF2F1907527A00C02A76 /* fastFacts.html in Resources */ = {isa = PBXBuildFile; fileRef = 65D4CF2A1907527A00C02A76 /* fastFacts.html */; };
 		65D4CF301907527A00C02A76 /* generalAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 65D4CF2B1907527A00C02A76 /* generalAbout.html */; };
 		65D4CF311907527A00C02A76 /* missionInfo.html in Resources */ = {isa = PBXBuildFile; fileRef = 65D4CF2C1907527A00C02A76 /* missionInfo.html */; };
+		65D4CF341907555200C02A76 /* titlepage_cwrutour_edited.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D4CF331907555200C02A76 /* titlepage_cwrutour_edited.png */; };
 		65DADEC518FEFCFA00C124CC /* GeneralInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADEC418FEFCFA00C124CC /* GeneralInfoViewController.m */; };
 		65DADECE18FF055300C124CC /* FastFactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADECD18FF055300C124CC /* FastFactsViewController.m */; };
 		65DADED118FF05A600C124CC /* ClevelandInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DADED018FF05A600C124CC /* ClevelandInfoViewController.m */; };
@@ -169,7 +169,6 @@
 		65CB7D7C18CB9A84008CA02E /* FreeRoamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeRoamViewController.m; sourceTree = "<group>"; };
 		65D28E9A18F1E5EA00A922E8 /* ksl_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ksl_cwrutour_edited.png; sourceTree = "<group>"; };
 		65D28E9C18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = binary_walkway_cwrutour_general.png; path = ../binary_walkway_cwrutour_general.png; sourceTree = "<group>"; };
-		65D28E9E18F21DA500A922E8 /* binary_walkway_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = binary_walkway_cwrutour.png; sourceTree = "<group>"; };
 		65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pbl_cwrutour_edited.png; sourceTree = "<group>"; };
 		65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = students_with_church_cwrutour_edited.png; sourceTree = "<group>"; };
 		65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cleveland_cwrutour_edited.png; sourceTree = "<group>"; };
@@ -178,6 +177,7 @@
 		65D4CF2A1907527A00C02A76 /* fastFacts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = fastFacts.html; path = ../fastFacts.html; sourceTree = "<group>"; };
 		65D4CF2B1907527A00C02A76 /* generalAbout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = generalAbout.html; path = ../generalAbout.html; sourceTree = "<group>"; };
 		65D4CF2C1907527A00C02A76 /* missionInfo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = missionInfo.html; path = ../missionInfo.html; sourceTree = "<group>"; };
+		65D4CF331907555200C02A76 /* titlepage_cwrutour_edited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titlepage_cwrutour_edited.png; sourceTree = "<group>"; };
 		65DADEC318FEFCFA00C124CC /* GeneralInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralInfoViewController.h; sourceTree = "<group>"; };
 		65DADEC418FEFCFA00C124CC /* GeneralInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralInfoViewController.m; sourceTree = "<group>"; };
 		65DADECC18FF055300C124CC /* FastFactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsViewController.h; sourceTree = "<group>"; };
@@ -346,17 +346,11 @@
 		6570269518C2A05000B3E41D /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				65D4CF361907558000C02A76 /* Tour Type Pics */,
+				65D4CF351907556700C02A76 /* About Pics */,
 				65965F5D1905E94800A9FD32 /* Tabs */,
-				65965F571905E79300A9FD32 /* sign_up_cwrutour_edited.png */,
-				65965F531905E76D00A9FD32 /* freeroam_cwrutour_edited.png */,
-				65965F541905E76D00A9FD32 /* guided_tour_cwrutour_edited.png */,
-				65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */,
-				65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */,
-				65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */,
+				65D4CF331907555200C02A76 /* titlepage_cwrutour_edited.png */,
 				65836A5818E06B970002FAD1 /* cwruSunTestPic.png */,
-				65D28E9C18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png */,
-				65D28E9E18F21DA500A922E8 /* binary_walkway_cwrutour.png */,
-				65D28E9A18F1E5EA00A922E8 /* ksl_cwrutour_edited.png */,
 				6570269618C2A64A00B3E41D /* college-photo_8808..jpg */,
 			);
 			name = Pictures;
@@ -439,6 +433,28 @@
 				65D4CF2C1907527A00C02A76 /* missionInfo.html */,
 			);
 			name = "html files";
+			sourceTree = "<group>";
+		};
+		65D4CF351907556700C02A76 /* About Pics */ = {
+			isa = PBXGroup;
+			children = (
+				65D28EA818F229FC00A922E8 /* cleveland_cwrutour_edited.png */,
+				65D28EA418F222CA00A922E8 /* pbl_cwrutour_edited.png */,
+				65D28E9A18F1E5EA00A922E8 /* ksl_cwrutour_edited.png */,
+			);
+			name = "About Pics";
+			sourceTree = "<group>";
+		};
+		65D4CF361907558000C02A76 /* Tour Type Pics */ = {
+			isa = PBXGroup;
+			children = (
+				65D28E9C18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png */,
+				65965F571905E79300A9FD32 /* sign_up_cwrutour_edited.png */,
+				65965F531905E76D00A9FD32 /* freeroam_cwrutour_edited.png */,
+				65965F541905E76D00A9FD32 /* guided_tour_cwrutour_edited.png */,
+				65D28EA618F226CD00A922E8 /* students_with_church_cwrutour_edited.png */,
+			);
+			name = "Tour Type Pics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +544,7 @@
 				2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */,
 				65D4CF301907527A00C02A76 /* generalAbout.html in Resources */,
 				65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */,
+				65D4CF341907555200C02A76 /* titlepage_cwrutour_edited.png in Resources */,
 				65D4CF2F1907527A00C02A76 /* fastFacts.html in Resources */,
 				65965F5F1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png in Resources */,
 				2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */,
@@ -539,7 +556,6 @@
 				65965F561905E76D00A9FD32 /* guided_tour_cwrutour_edited.png in Resources */,
 				2EEAD47B18FF4ED30075274E /* newLocation.gpx in Resources */,
 				65965F551905E76D00A9FD32 /* freeroam_cwrutour_edited.png in Resources */,
-				65D28E9F18F21DA500A922E8 /* binary_walkway_cwrutour.png in Resources */,
 				65D28E9B18F1E5EA00A922E8 /* ksl_cwrutour_edited.png in Resources */,
 				65D4CF2D1907527A00C02A76 /* campusLife.html in Resources */,
 				651D671518B925F20017A465 /* InfoPlist.strings in Resources */,
