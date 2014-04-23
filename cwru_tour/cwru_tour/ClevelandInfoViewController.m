@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString* clevelandInfo = @"Cleveland Info here.";
-    [self.clevelandTextView setText:clevelandInfo];
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"clevelandInfo" withExtension:@"html"];
+    [self.clevelandWebView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

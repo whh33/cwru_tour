@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString* fastFactsInfo = @"Fast Facts here.";
-    [self.fastFactsTextView setText:fastFactsInfo];
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"fastFacts" withExtension:@"html"];
+    [self.fastFactsWebView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

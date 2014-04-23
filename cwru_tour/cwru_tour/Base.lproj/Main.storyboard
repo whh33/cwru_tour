@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ANQ-v8-Tut">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ANQ-v8-Tut">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -146,7 +146,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gny-Zs-Iky" userLabel="AboutGeneralButton">
                                 <rect key="frame" x="0.0" y="26" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GeneralButton">
+                                <state key="normal" title=" ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -156,7 +156,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAn-hz-2Hq" userLabel="AboutFastFactsButton">
                                 <rect key="frame" x="0.0" y="221" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FastFactsButton">
+                                <state key="normal" title=" ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -166,7 +166,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90m-cB-lzV" userLabel="AboutCampusLifeButton">
                                 <rect key="frame" x="0.0" y="320" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CampusLifeButton">
+                                <state key="normal" title=" ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -176,7 +176,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92A-4q-2Wo" userLabel="AboutMissionButton">
                                 <rect key="frame" x="0.0" y="128" width="320" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="MissionButton"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="sZX-a3-hid" kind="push" id="EyK-OM-DQn"/>
                                 </connections>
@@ -184,7 +184,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-GY-QlU" userLabel="AboutClevelandButton">
                                 <rect key="frame" x="0.0" y="419" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ClevelandButton"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="6Gp-hC-OFH" kind="push" id="xdD-bb-w3W"/>
                                 </connections>
@@ -214,13 +214,13 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRz-Yu-opd">
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRz-Yu-opd">
                                 <rect key="frame" x="20" y="167" width="280" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="abx-9b-iKm"/>
                     <navigationItem key="navigationItem" title="Mission" id="xfu-xU-SST"/>
@@ -248,13 +248,13 @@
                                 <rect key="frame" x="0.0" y="65" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsz-Sv-4fi">
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fsz-Sv-4fi">
                                 <rect key="frame" x="20" y="167" width="280" height="351"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.039215686274509803" green="0.18823529411764706" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="General About" id="h3t-Im-sij"/>
                     <connections>
@@ -284,14 +284,14 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP7-3y-MnP">
                                 <rect key="frame" x="0.0" y="164" width="320" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mlw-8p-Agp">
-                                <rect key="frame" x="20" y="164" width="280" height="353"/>
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mlw-8p-Agp">
+                                <rect key="frame" x="15" y="164" width="280" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -322,13 +322,13 @@
                                 <rect key="frame" x="0.0" y="66" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15h-5r-KUr">
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15h-5r-KUr">
                                 <rect key="frame" x="20" y="168" width="280" height="348"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Campus Life" image="cwruSunTestPic.png" id="Jrp-fY-2VS"/>
                     <navigationItem key="navigationItem" title="Campus Life" id="hss-rs-Rel"/>
@@ -356,13 +356,13 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kda-fk-19m">
+                            <webView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kda-fk-19m">
                                 <rect key="frame" x="20" y="165" width="280" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.039215686270000001" green="0.18823529410000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="cwruSunTestPic.png" id="ZAz-q3-dyH"/>
                     <navigationItem key="navigationItem" title="Cleveland and University Circle" id="QQB-kd-kl1"/>
@@ -597,7 +597,7 @@
         <scene sceneID="AoD-W1-jQm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XNo-8y-pW1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buildings" image="cwruSunTestPic.png" id="k7d-ve-8to"/>
+                    <tabBarItem key="tabBarItem" title="Buildings" image="city_tab_cwrutour.png" id="k7d-ve-8to"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="goV-UK-99L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

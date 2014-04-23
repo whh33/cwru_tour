@@ -10,6 +10,6 @@
 
 @interface MissionInfoViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView* missionTextView;
+@property (strong, nonatomic) IBOutlet UIWebView* missionWebView;
 
 @end

@@ -10,6 +10,6 @@
 
 @interface FastFactsViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView* fastFactsTextView;
+@property (strong, nonatomic) IBOutlet UIWebView* fastFactsWebView;
 
 @end

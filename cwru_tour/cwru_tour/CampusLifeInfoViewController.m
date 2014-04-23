@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString* campusLifeInfo = @"Campus Life Info here.";
-    [self.campusLifeTextView setText:campusLifeInfo];
+    NSURL* url = [[NSBundle mainBundle] URLForResource:@"campusLife" withExtension:@"html"];
+    [self.campusLifeWebView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 

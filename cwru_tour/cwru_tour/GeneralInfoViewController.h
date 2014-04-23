@@ -10,6 +10,6 @@
 
 @interface GeneralInfoViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView* generalTextView;
+@property (strong, nonatomic) IBOutlet UIWebView* generalWebView;
 
 @end
