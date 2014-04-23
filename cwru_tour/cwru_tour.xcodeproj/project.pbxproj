@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E6D9E3D1908832A00924354 /* textbubblepic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D9E3C1908832A00924354 /* textbubblepic.png */; };
 		2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EDDD04919006E8900A581E6 /* InfoWindow.xib */; };
 		2EDDD04E19006EEF00A581E6 /* CustomInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */; };
 		2EDDD0541900C0A000A581E6 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD0531900C0A000A581E6 /* Building.m */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E6D9E3C1908832A00924354 /* textbubblepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbubblepic.png; sourceTree = "<group>"; };
 		2EDDD04919006E8900A581E6 /* InfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoWindow.xib; sourceTree = "<group>"; };
 		2EDDD04C19006EEF00A581E6 /* CustomInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindow.h; sourceTree = "<group>"; };
 		2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindow.m; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		6570269518C2A05000B3E41D /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D9E3C1908832A00924354 /* textbubblepic.png */,
 				65D4CF361907558000C02A76 /* Tour Type Pics */,
 				65D4CF351907556700C02A76 /* About Pics */,
 				65965F5D1905E94800A9FD32 /* Tabs */,
@@ -544,6 +547,7 @@
 				65D28E9D18F1F0FB00A922E8 /* binary_walkway_cwrutour_general.png in Resources */,
 				651D672318B925F20017A465 /* Images.xcassets in Resources */,
 				65965F6719071B4000A9FD32 /* mappin__tab_cwrutour.png in Resources */,
+				2E6D9E3D1908832A00924354 /* textbubblepic.png in Resources */,
 				2EEAD45818FF471C0075274E /* GoogleMaps.bundle in Resources */,
 				65D4CF301907527A00C02A76 /* generalAbout.html in Resources */,
 				65D28EA718F226CD00A922E8 /* students_with_church_cwrutour_edited.png in Resources */,

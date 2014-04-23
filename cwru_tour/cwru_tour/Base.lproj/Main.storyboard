@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGc-ob-uIk">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="149"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.039215686274509803" green="0.14901960784313725" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZh-iq-wFb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="147"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.039215686270000001" green="0.14901960780000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -509,6 +509,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="IZf-39-MoF" id="Sma-r4-b7F"/>
                             <outlet property="delegate" destination="IZf-39-MoF" id="BPL-Tv-TXR"/>

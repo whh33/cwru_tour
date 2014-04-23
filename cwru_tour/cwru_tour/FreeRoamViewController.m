@@ -126,10 +126,11 @@
     Building *specificBuilding = object[0];
     //reposition camera
     mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
-                                                     zoom:14];
+                                                     zoom:mapView_.camera.zoom];
     //set info window properties
+    [self.longDescription setContentOffset:CGPointZero animated:NO];
     self.longDescription.text = specificBuilding.longDescription;
-    infoWindow.buildingInfo.textColor= [UIColor blueColor];
+    //infoWindow.buildingInfo.textColor= [UIColor blueColor];
     [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;

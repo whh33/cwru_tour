@@ -9,6 +9,7 @@
 #import "BuildingDescriptionViewController.h"
 #import "DirectionsViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "CustomInfoWindow.h"
 
 @interface BuildingDescriptionViewController () <GMSMapViewDelegate>
 
@@ -73,6 +74,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+    //Initialize custom info window.
+    CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
+
+    //reposition camera
+    mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
+                                                     zoom:mapView_.camera.zoom];
+    
+    //infoWindow.buildingInfo.textColor= [UIColor blueColor];
+    [infoWindow.buildingInfo setText: marker.title];
+    
+    return infoWindow;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *) segue sender:(id)sender{

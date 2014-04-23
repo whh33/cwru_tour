@@ -10,7 +10,8 @@
 
 @interface CustomInfoWindow : UIView
 
-@property (weak, nonatomic) IBOutlet UITextView *buildingInfo;
+//@property (weak, nonatomic) IBOutlet UITextView *buildingInfo;
+@property (weak, nonatomic) IBOutlet UILabel *buildingInfo;
 
 
 @end

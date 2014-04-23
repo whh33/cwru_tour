@@ -8,6 +8,7 @@
 
 #import "DirectionsViewController.h"
 #import "MDDirectionService.h"
+#import "CustomInfoWindow.h"
 
 @interface DirectionsViewController ()
 
@@ -114,6 +115,19 @@
     polyline.map = self.mapView;
 }
 
+-(UIView *) mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker{
+    //Initialize custom info window.
+    CustomInfoWindow *infoWindow = [[[NSBundle mainBundle] loadNibNamed:@"InfoWindow" owner:self options:nil] objectAtIndex:0];
+    
+    //reposition camera
+    self.mapView.camera = [GMSCameraPosition cameraWithTarget:marker.position
+                                                     zoom:self.mapView.camera.zoom];
+    
+    //infoWindow.buildingInfo.textColor= [UIColor blueColor];
+    [infoWindow.buildingInfo setText: marker.title];
+    
+    return infoWindow;
+}
 
 - (void)didReceiveMemoryWarning
 {

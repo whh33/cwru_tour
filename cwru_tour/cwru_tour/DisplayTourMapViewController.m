@@ -16,6 +16,7 @@
     @property (strong, nonatomic) NSMutableArray *waypoints;
     @property (strong, nonatomic) NSMutableArray *waypointStrings;
     @property(strong, nonatomic) NSMutableArray *landmarksOnRoute;
+    @property(strong, nonatomic) NSMutableArray *annotationsOnRoute;
 @end
 
 @implementation DisplayTourMapViewController{
@@ -61,7 +62,8 @@
                   options:NSKeyValueObservingOptionNew
                   context:NULL];
     
-    [self createLandmarkObjects];
+    [self createWaypointObjects];
+    [self createAnnotationObjects];
     [self.view addSubview:mapView_];
 }
 
@@ -87,7 +89,7 @@
     }
 }
 
--(void) createLandmarkObjects{
+-(void) createWaypointObjects{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     [fetchRequest setEntity:self.buildingEntity];
@@ -99,7 +101,7 @@
     
     self.landmarksOnRoute = [[NSMutableArray alloc] init];
     
-    NSString *allBuildingsInRoute = [self.instanceIndividual valueForKey:@"buildingsInRoute"];
+    NSString *allBuildingsInRoute = [self.instanceIndividual valueForKey:@"waypointBuildings"];
     NSArray *record = [allBuildingsInRoute componentsSeparatedByString:@","];
     
     for (NSString *value in record) {
@@ -119,7 +121,40 @@
         Landmark *temp = [[Landmark alloc] initWithTitle:buildingName waypointLatitude:waypointLatitude waypointLongitude:waypointLongitude annotationLatitude:annotationLatitude annotationLongitude:annotationLongitude];
         [self.landmarksOnRoute addObject:temp];
     }
+}
 
+-(void)createAnnotationObjects{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    [fetchRequest setEntity:self.buildingEntity];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    
+    self.annotationsOnRoute = [[NSMutableArray alloc] init];
+    
+    NSString *allBuildingsInRoute = [self.instanceIndividual valueForKey:@"buildingsInRoute"];
+    NSArray *record = [allBuildingsInRoute componentsSeparatedByString:@","];
+    
+    for (NSString *value in record) {
+        NSString *buildingName = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSPredicate *byName = [NSPredicate predicateWithFormat:@"name == %@",buildingName];
+        [fetchRequest setPredicate:byName];
+        
+        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        NSManagedObject *fetchedObject = array[0];
+        
+        double waypointLongitude = [[fetchedObject valueForKey:@"waypointLon"] doubleValue];
+        double waypointLatitude = [[fetchedObject valueForKey:@"waypointLat"] doubleValue];
+        double annotationLongitude= [[fetchedObject valueForKey:@"longitude"] doubleValue];
+        double annotationLatitude= [[fetchedObject valueForKey:@"latitude"] doubleValue];
+        
+        Landmark *temp = [[Landmark alloc] initWithTitle:buildingName waypointLatitude:waypointLatitude waypointLongitude:waypointLongitude annotationLatitude:annotationLatitude annotationLongitude:annotationLongitude];
+        [self.annotationsOnRoute addObject:temp];
+    }
 }
 
 -(void)loadRoute{
@@ -138,7 +173,6 @@
                        withDelegate:self];
     }
     [self addMapAnnotation];
-    
 }
 
 -(void)addDirections:(NSDictionary *)json{
@@ -151,7 +185,8 @@
 }
 
 -(void)addMapAnnotation{
-    for(Landmark *landmark in self.landmarksOnRoute){
+    
+    for(Landmark *landmark in self.annotationsOnRoute){
         GMSMarker *landmarkMarker = [GMSMarker markerWithPosition:[landmark.getAnnotationCoordinateObject MKCoordinateValue]];
         landmarkMarker.title = landmark.getTitle;
         landmarkMarker.map = mapView_;
@@ -181,14 +216,15 @@
                                                      zoom:mapView_.camera.zoom];
     
     self.longDescription.text = specificBuilding.longDescription;
-    infoWindow.buildingInfo.textColor= [UIColor blueColor];
+    [self.longDescription setContentOffset:CGPointZero animated:NO];
+    //infoWindow.buildingInfo.textColor= [UIColor blueColor];
     [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;
 }
 
 -(IBAction)displayAnnotation:(id)sender{
-    NSInteger numLandmarks = self.landmarksOnRoute.count;
+    NSInteger numLandmarks = self.annotationsOnRoute.count;
     CLLocation *userLocation = [[CLLocation alloc] init];
     userLocation = [userLocation initWithLatitude:startPoint.latitude longitude:startPoint.longitude];
     //check to make sure don't exceed the bounds of the array
@@ -198,10 +234,10 @@
     if(!firstTime){
         firstTime = YES;
         Landmark *closestLandmark;
-        Landmark *firstLandmarkOnRoute = self.landmarksOnRoute[0];
+        Landmark *firstLandmarkOnRoute = self.annotationsOnRoute[0];
         closestLandmark = firstLandmarkOnRoute;
         CLLocationDistance min = [userLocation distanceFromLocation:firstLandmarkOnRoute.getCLLocation];
-        for(Landmark *currentLandmark in self.landmarksOnRoute){
+        for(Landmark *currentLandmark in self.annotationsOnRoute){
             CLLocationDistance distance = [userLocation distanceFromLocation:currentLandmark.getCLLocation];
             if(distance < min){
                 closestLandmark = currentLandmark;
@@ -211,7 +247,7 @@
         }
     }
     
-    Landmark *currentLandmarkToAnnotate = self.landmarksOnRoute[landmarkCount];
+    Landmark *currentLandmarkToAnnotate = self.annotationsOnRoute[landmarkCount];
     landmarkCount++;
     GMSMarker *testMarker = [GMSMarker markerWithPosition:[currentLandmarkToAnnotate.getAnnotationCoordinateObject MKCoordinateValue]];
     testMarker.title = currentLandmarkToAnnotate.getTitle;

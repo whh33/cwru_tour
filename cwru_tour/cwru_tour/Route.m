@@ -12,5 +12,6 @@
 
 @dynamic name;
 @dynamic buildingsInRoute;
+@dynamic waypointBuildings;
 
 @end
