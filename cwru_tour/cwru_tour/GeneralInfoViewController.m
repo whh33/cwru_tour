@@ -2,7 +2,7 @@
 //  GeneralInfoViewController.m
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 4/16/14.
+//  Created by Heath Hudgins on 3/16/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
@@ -32,13 +32,6 @@
     [self.generalWebView loadRequest:[NSURLRequest requestWithURL:url]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
-
-/*
- -(void)viewWillDisappear:(BOOL)animated{
- [super viewWillDisappear:animated];
- [self.navigationController setNavigationBarHidden:NO];
- }
- */
 
 - (void)didReceiveMemoryWarning
 {

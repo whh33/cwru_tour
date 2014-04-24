@@ -2,7 +2,7 @@
 //  DisplayTourMapViewController.m
 //  cwru_tour
 //
-//  Created by Eric Vennaro on 4/16/14.
+//  Created by Eric Vennaro on 3/8/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
     @property (strong, nonatomic) NSMutableArray *waypointStrings;
     @property(strong, nonatomic) NSMutableArray *landmarksOnRoute;
     @property(strong, nonatomic) NSMutableArray *annotationsOnRoute;
+
 @end
 
 @implementation DisplayTourMapViewController{
@@ -215,8 +216,13 @@
     mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
                                                      zoom:mapView_.camera.zoom];
     
-    self.longDescription.text = specificBuilding.longDescription;
-    [self.longDescription setContentOffset:CGPointZero animated:NO];
+    NSString *descriptionHTML = @"<font color=\"white\"><font size=2>";
+    descriptionHTML = [descriptionHTML stringByAppendingString:specificBuilding.longDescription];
+    descriptionHTML = [descriptionHTML stringByAppendingString:@"</font></font>"];
+    
+    [self.longDescription loadHTMLString:descriptionHTML baseURL:nil];
+    
+    //[self.longDescription setContentOffset:CGPointZero animated:NO];
     //infoWindow.buildingInfo.textColor= [UIColor blueColor];
     [infoWindow.buildingInfo setText: specificBuilding.name];
     

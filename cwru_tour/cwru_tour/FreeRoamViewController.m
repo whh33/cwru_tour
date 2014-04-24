@@ -31,23 +31,6 @@
     //declare core data
     self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-//    [fetchRequest setEntity:self.buildingEntity];
-//
-//    NSError *error = nil;
-//    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    // Set the batch size to a suitable number.
-    //[fetchRequest setFetchBatchSize:20];
-    
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-//    NSArray *sortDescriptors = @[sortDescriptor];
-//    [fetchRequest setSortDescriptors:sortDescriptors];
-//    
-//    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-//    aFetchedResultsController.delegate = self;
-//    self.fetchedResultsController = aFetchedResultsController;
-    
     //start map setup
     CGRect frame = self.view.bounds;
     frame.size.height = 360 ;
@@ -87,7 +70,7 @@
         firstLocationUpdate = YES;
         CLLocation *location = [change objectForKey:NSKeyValueChangeNewKey];
         mapView_.camera = [GMSCameraPosition cameraWithTarget:location.coordinate
-                                                             zoom:14];
+                                                             zoom:17];
     }
 }
 
@@ -128,9 +111,14 @@
     mapView_.camera = [GMSCameraPosition cameraWithTarget:marker.position
                                                      zoom:mapView_.camera.zoom];
     //set info window properties
-    [self.longDescription setContentOffset:CGPointZero animated:NO];
-    self.longDescription.text = specificBuilding.longDescription;
-    //infoWindow.buildingInfo.textColor= [UIColor blueColor];
+    NSString *descriptionHTML = @"<font color=\"white\"><font size=2>";
+    descriptionHTML = [descriptionHTML stringByAppendingString:specificBuilding.longDescription];
+    descriptionHTML = [descriptionHTML stringByAppendingString:@"</font></font>"];
+    
+    [self.longDescription loadHTMLString:descriptionHTML baseURL:nil];
+    
+    //[self.longDescription setContentOffset:CGPointZero animated:NO];
+
     [infoWindow.buildingInfo setText: specificBuilding.name];
     
     return infoWindow;

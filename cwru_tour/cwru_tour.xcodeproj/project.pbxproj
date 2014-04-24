@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E6D9E3D1908832A00924354 /* textbubblepic.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D9E3C1908832A00924354 /* textbubblepic.png */; };
+		2E6D9E3F1908A19B00924354 /* tour_tab_cwrutour.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6D9E3E1908A19B00924354 /* tour_tab_cwrutour.png */; };
 		2EDDD04A19006E8900A581E6 /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EDDD04919006E8900A581E6 /* InfoWindow.xib */; };
 		2EDDD04E19006EEF00A581E6 /* CustomInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */; };
 		2EDDD0541900C0A000A581E6 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDDD0531900C0A000A581E6 /* Building.m */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		2E6D9E3C1908832A00924354 /* textbubblepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbubblepic.png; sourceTree = "<group>"; };
+		2E6D9E3E1908A19B00924354 /* tour_tab_cwrutour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour_tab_cwrutour.png; sourceTree = "<group>"; };
 		2EDDD04919006E8900A581E6 /* InfoWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoWindow.xib; sourceTree = "<group>"; };
 		2EDDD04C19006EEF00A581E6 /* CustomInfoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfoWindow.h; sourceTree = "<group>"; };
 		2EDDD04D19006EEF00A581E6 /* CustomInfoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfoWindow.m; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		65965F5D1905E94800A9FD32 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D9E3E1908A19B00924354 /* tour_tab_cwrutour.png */,
 				65D4CF39190760DB00C02A76 /* city_tab_cwrutour_take2.png */,
 				65965F5E1905E98C00A9FD32 /* cwrutourlog_tab_cwrutour.png */,
 				65965F6619071B4000A9FD32 /* mappin__tab_cwrutour.png */,
@@ -566,6 +569,7 @@
 				65D4CF3A190760DB00C02A76 /* city_tab_cwrutour_take2.png in Resources */,
 				65D28E9B18F1E5EA00A922E8 /* ksl_cwrutour_edited.png in Resources */,
 				65D4CF2D1907527A00C02A76 /* campusLife.html in Resources */,
+				2E6D9E3F1908A19B00924354 /* tour_tab_cwrutour.png in Resources */,
 				651D671518B925F20017A465 /* InfoPlist.strings in Resources */,
 				651D671E18B925F20017A465 /* Main.storyboard in Resources */,
 				65D28EA518F222CA00A922E8 /* pbl_cwrutour_edited.png in Resources */,

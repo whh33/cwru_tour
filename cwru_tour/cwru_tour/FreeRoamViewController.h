@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
-@property (weak, nonatomic) IBOutlet UITextView *longDescription;
+@property (weak, nonatomic) IBOutlet UIWebView *longDescription;
 
 
 @end

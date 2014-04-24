@@ -2,7 +2,7 @@
 //  DisplayTourMapViewController.h
 //  cwru_tour
 //
-//  Created by Eric Vennaro on 4/16/14.
+//  Created by Eric Vennaro on 3/8/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 
 //@property (strong, nonatomic) GMSMapView *mapView;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (weak, nonatomic) IBOutlet UITextView *longDescription;
+@property (weak, nonatomic) IBOutlet UIWebView *longDescription;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;

@@ -37,7 +37,13 @@
     [self.name setFont:[UIFont fontWithName:@"Helvetica" size:19]];
     [self.name sizeToFit];
     
-    self.description.text = [self.instanceIndividual valueForKey:@"longDescription"];
+    NSString *descriptionHTML = @"<font color=\"white\"><font size=2>";
+    NSString *dataString = [self.instanceIndividual valueForKey:@"longDescription"];
+    descriptionHTML = [descriptionHTML stringByAppendingString:dataString];
+    descriptionHTML = [descriptionHTML stringByAppendingString:@"</font></font>"];
+    
+    [self.description loadHTMLString:descriptionHTML baseURL:nil];
+    
     //initialize map as a section of the view controller
     CGRect frame = self.view.bounds;
     frame.size.height = frame.size.height / 3;
