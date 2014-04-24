@@ -5,43 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1ECD53CF-0D07-48CD-A821-68BAD4B878E2</string>
+	<string>B6AAC3C5-4988-4C37-A609-0145E8F5D22B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>cwru_tour</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C26B4346-69B0-41E6-A31B-0934346A7ECE</key>
-		<string>https://github.com/whh33/cwru_tour/trunk</string>
+		<key>5B8E8BD1-7F10-40D9-8443-12E53E7D09AD</key>
+		<string>https://github.com/whh33/cwru_tour.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cwru_tour/cwru_tour.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C26B4346-69B0-41E6-A31B-0934346A7ECE</key>
+		<key>5B8E8BD1-7F10-40D9-8443-12E53E7D09AD</key>
 		<string>../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>C26B4346-69B0-41E6-A31B-0934346A7ECE</key>
-		<string>https://github.com/whh33/cwru_tour</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/whh33/cwru_tour/trunk/cwru_tour/cwru_tour.xcodeproj</string>
+	<string>https://github.com/whh33/cwru_tour.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C26B4346-69B0-41E6-A31B-0934346A7ECE</string>
+	<string>5B8E8BD1-7F10-40D9-8443-12E53E7D09AD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C26B4346-69B0-41E6-A31B-0934346A7ECE</string>
+			<string>5B8E8BD1-7F10-40D9-8443-12E53E7D09AD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>cwru_tour</string>
 		</dict>

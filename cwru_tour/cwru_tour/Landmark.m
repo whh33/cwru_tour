@@ -14,7 +14,7 @@
     self = [super init];
     if(self){
         title = landmarkTitle;
-        [self setCLLocation:(double)wLat with:(double)wLon];
+        [self setCLLocation:(double)aLat with:(double)aLon];
         [self setCLLocatinCoordinateObject:wLat with:wLon];
         [self setLandmarkMarker];
         [self setAnnotationCLLocationCoordinate: (double)aLat with: (double)aLon];
@@ -33,10 +33,12 @@
 -(void) setLandmarkMarker{
     landmarkMarker = [GMSMarker markerWithPosition:[coordinate MKCoordinateValue]];
 }
+
 -(void) setCLLocatinCoordinateObject:(double)latitude with:(double)longitude{
     CLLocationCoordinate2D newCoord = CLLocationCoordinate2DMake(latitude, longitude);
     coordinate = [NSValue valueWithMKCoordinate:newCoord];
 }
+ 
 -(void) setWaypointPositionString:(double)latitude and: (double) longitude{
     landmarkPositionString = [NSString stringWithFormat:@"%f, %f", latitude,longitude];
 }

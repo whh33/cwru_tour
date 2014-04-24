@@ -243,13 +243,15 @@
         Landmark *firstLandmarkOnRoute = self.annotationsOnRoute[0];
         closestLandmark = firstLandmarkOnRoute;
         CLLocationDistance min = [userLocation distanceFromLocation:firstLandmarkOnRoute.getCLLocation];
+        int position = 0;
         for(Landmark *currentLandmark in self.annotationsOnRoute){
             CLLocationDistance distance = [userLocation distanceFromLocation:currentLandmark.getCLLocation];
             if(distance < min){
                 closestLandmark = currentLandmark;
-                landmarkCount++;
+                landmarkCount = position;
                 min=distance;
             }
+            position++;
         }
     }
     
