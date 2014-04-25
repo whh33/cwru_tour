@@ -21,11 +21,4 @@
 
 @interface Building (CoreDataGeneratedAccessors)
 
-- (Building *) setValueWithBuildingName:(NSString*) name
-                              longitude:(NSString*) longitude
-                               latitude:(NSString*) latitude
-                              waypointLon:(NSString*) waypointLon
-                               waypointLat:(NSString*) waypointLat
-                            description:(NSString*) longDescription;
-
 @end

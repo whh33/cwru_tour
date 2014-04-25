@@ -2,7 +2,7 @@
 //  BuildingsViewController.h
 //  cwru_tour
 //
-//  Created by Sean Corcoran on 3/4/14.
+//  Created by Sean Corcoran on 2/23/14.
 //  Copyright (c) 2014 EECS397. All rights reserved.
 //
 

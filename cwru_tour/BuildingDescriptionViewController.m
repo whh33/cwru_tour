@@ -2,14 +2,14 @@
 //  SpecificBuildingViewController.m
 //  cwru_tour
 //
-//  Created by Eric Vennaro on 4/18/14.
+//  Created by Eric Vennaro on 3/18/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 
 #import "BuildingDescriptionViewController.h"
 #import "DirectionsViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
 #import "CustomInfoWindow.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface BuildingDescriptionViewController () <GMSMapViewDelegate>
 
@@ -49,8 +49,7 @@
     frame.size.height = frame.size.height / 3;
     frame.origin.y= frame.size.height - 50;
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[self.instanceIndividual
-                                                                        valueForKey:@"Latitude"] doubleValue]
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[self.instanceIndividual valueForKey:@"Latitude"] doubleValue]
                                                             longitude:[[self.instanceIndividual valueForKey:@"Longitude"] doubleValue]
                                                                  zoom:17];
     
@@ -60,7 +59,8 @@
     UIViewAutoresizingFlexibleBottomMargin;
     mapView_.mapType = kGMSTypeHybrid;
     mapView_.delegate = self;
-    //add annotation
+    
+    //add the annotation
     CLLocationCoordinate2D buildingLocation =CLLocationCoordinate2DMake([[self.instanceIndividual valueForKey:@"Latitude"] doubleValue], [[self.instanceIndividual valueForKey:@"Longitude"] doubleValue]);
     GMSMarker *buildingMarker = [GMSMarker markerWithPosition:buildingLocation];
     buildingMarker.title = [self.instanceIndividual valueForKey:@"name"];
@@ -68,13 +68,6 @@
     
     [self.view addSubview:mapView_];
 }
-
-//+ (GMSCameraPosition *)defaultCamera{
-//    
-//    return [GMSCameraPosition cameraWithLatitude:37.7847
-//                                       longitude:-122.41
-//                                            zoom:5];
-//}
 
 - (void)didReceiveMemoryWarning
 {

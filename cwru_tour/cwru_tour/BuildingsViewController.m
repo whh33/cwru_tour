@@ -2,8 +2,8 @@
 //  BuildingsViewController.m
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 2/23/14.
-//  Copyright (c) 2014 Heath Hudgins. All rights reserved.
+//  Created by Sean Corcoran on 2/23/14.
+//  Copyright (c) 2014 EECS397. All rights reserved.
 //
 
 #import "BuildingsViewController.h"
@@ -35,12 +35,6 @@
     [super viewDidLoad];
     
     self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,9 +63,9 @@
     return cell;
 }
 
+// Return NO if you do not want the specified item to be editable.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
     return NO;
 }
 
@@ -83,17 +77,15 @@
         
         NSError *error = nil;
         if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
 }
 
+// The table view should not be re-orderable.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The table view should not be re-orderable.
     return NO;
 }
 
@@ -135,8 +127,6 @@
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    //NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
     NSEntityDescription *buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     self.buildingEntity = buildingEntity;
     
@@ -157,8 +147,6 @@
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
@@ -216,25 +204,11 @@
     [self.tableView endUpdates];
 }
 
-/*
- // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
- {
- // In the simplest, most efficient, case, reload the table view.
- [self.tableView reloadData];
- }
- */
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    //    NSInteger row = indexPath.row+1;
-    //    NSIndexPath *newIndexPath = [NSIndexPath indexPathWithIndex:row];
-    
     Building *object = (Building *) [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = object.name;
-    cell.detailTextLabel.text = [[NSString alloc]initWithFormat:@"%@, %@", [object.longitude stringValue], [object.latitude stringValue]];
-    cell.detailTextLabel.textAlignment = NSTextAlignmentRight;
 }
 
 @end

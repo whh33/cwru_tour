@@ -364,7 +364,7 @@
             </objects>
             <point key="canvasLocation" x="2930" y="-217"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Home-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -390,7 +390,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cwrutourlog_tab_cwrutour.png" id="pFM-aU-bBA"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_tab.png" id="pFM-aU-bBA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -464,7 +464,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tours" image="tour_tab_cwrutour.png" id="EKB-lm-S3o"/>
                     <navigationItem key="navigationItem" title="Title" id="eoX-Tv-JSZ">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Yer-rt-SMa"/>
+                        <barButtonItem key="leftBarButtonItem" id="Yer-rt-SMa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="FreeRoamButton" destination="9g4-ml-rYO" id="ibD-xY-6Hm"/>
@@ -648,9 +648,9 @@
         <image name="city_tab_cwrutour_take2.png" width="45" height="45"/>
         <image name="cleveland_cwrutour_edited.png" width="599" height="198"/>
         <image name="cwruSunTestPic.png" width="60" height="60"/>
-        <image name="cwrutourlog_tab_cwrutour.png" width="60" height="60"/>
         <image name="freeroam_cwrutour_edited.png" width="313" height="454"/>
         <image name="guided_tour_cwrutour_edited.png" width="727" height="491"/>
+        <image name="home_tab.png" width="45" height="45"/>
         <image name="ksl_cwrutour_edited.png" width="598" height="184"/>
         <image name="pbl_cwrutour_edited.png" width="550" height="205"/>
         <image name="risingsun_tab_cwrutour.png" width="60" height="60"/>

@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import <GoogleMaps/GoogleMaps.h>
 #import "BuildingsViewController.h"
 #import "TourViewController.h"
 #import "Building.h"
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @implementation AppDelegate
 
@@ -28,10 +29,6 @@
     BuildingsViewController *bvController = (BuildingsViewController *)navigationController.topViewController;
     bvController.managedObjectContext = self.managedObjectContext;
     
-//    navigationController = tabBarController.viewControllers[1];
-//    TourViewController *tvController = (BuildingsViewController *) navigationController.topViewController;
-//    tvController.managedObjectContext = self.managedObjectContext;
-
     return YES;
 }
 							
@@ -68,8 +65,6 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -77,9 +72,7 @@
 }
 
 
-#pragma mark - load file
-
-#pragma - loadfile
+#pragma mark - load files
 - (NSURL *)buildingListFileDirectory
 {
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"buildingList" withExtension:@"txt"];
@@ -105,15 +98,11 @@
     [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     [allLinedStrings removeObjectAtIndex:0];
     
-    //NSArray *allLinedStrings =[fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    
-    //then for each line create a record in your database
+    //then, for each line, create a record in your database
     NSManagedObjectContext *context = self.managedObjectContext;
     NSEntityDescription *buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     
-    //for (int i = 1, i < [allLineStrings count], i++) {
     for (NSString *currentLine in allLinedStrings) {
-        //NSString *currentLine = [allLinedStrings objectAtIndex:i];
         NSArray *record = [currentLine componentsSeparatedByString:@"^"];
         
         NSManagedObject *newBuilding = [[NSManagedObject alloc] initWithEntity:buildingEntity insertIntoManagedObjectContext:context];
@@ -136,8 +125,6 @@
     // Save the context.
     error = nil;
     if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -146,24 +133,16 @@
 - (void)initRouteDatabaseFromURL:(NSURL*)url
 {
     NSError *error;
-    // read everything from text
     NSString * fileContents =[NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
-    //trim the last newline charater
     fileContents = [fileContents stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    // first, separate by new line
     NSMutableArray *allLinedStrings =
     [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     [allLinedStrings removeObjectAtIndex:0];
     
-    //NSArray *allLinedStrings =[fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    
-    //then for each line create a record in your database
     NSManagedObjectContext *context = self.managedObjectContext;
     NSEntityDescription *routeEntity = [NSEntityDescription entityForName:@"Route" inManagedObjectContext:self.managedObjectContext];
     
-    //for (int i = 1, i < [allLineStrings count], i++) {
     for (NSString *currentLine in allLinedStrings) {
-        //NSString *currentLine = [allLinedStrings objectAtIndex:i];
         NSArray *record = [currentLine componentsSeparatedByString:@"^"];
         
         NSManagedObject *newRoute = [[NSManagedObject alloc] initWithEntity:routeEntity insertIntoManagedObjectContext:context];
@@ -180,15 +159,13 @@
     // Save the context.
     error = nil;
     if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
 }
 
-#pragma mark - Core Data stack
 
+#pragma mark - Core Data stack
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext
@@ -233,10 +210,6 @@
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-         
          Typical reasons for an error here include:
          * The persistent store is not accessible;
          * The schema for the persistent store is incompatible with current managed object model.
@@ -253,16 +226,11 @@
          @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
          
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     
-    //populate data from file, should use dispatch queue, should only load once
-    
-    //NSString * alreadyRead = [[NSUserDefaults standardUserDefaults] valueForKey:@"AlreadyRead"];
-    //if([alreadyRead length] == 0){
     if(!alreadyRan){
         
         NSURL* url = [self buildingListFileDirectory];
@@ -278,8 +246,8 @@
     return _persistentStoreCoordinator;
 }
 
-#pragma mark - Application's Documents directory
 
+#pragma mark - Application's Documents directory
 // Returns the URL to the application's Documents directory.
 - (NSURL *)applicationDocumentsDirectory
 {

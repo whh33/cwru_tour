@@ -2,8 +2,8 @@
 //  MissionInfoViewController.h
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 3/16/14.
-//  Copyright (c) 2014 Heath Hudgins. All rights reserved.
+//  Created by Sean Corcoran on 3/2/14.
+//  Copyright (c) 2014 Sean Corcoran. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

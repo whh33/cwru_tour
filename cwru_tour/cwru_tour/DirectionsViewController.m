@@ -2,7 +2,7 @@
 //  DirectionsViewController.m
 //  cwru_tour
 //
-//  Created by Eric Vennaro on 4/20/14.
+//  Created by Eric Vennaro on 4/2/14.
 //  Copyright (c) 2014 Heath Hudgins. All rights reserved.
 //
 

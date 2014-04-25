@@ -2,8 +2,8 @@
 //  MissionInfoViewController.m
 //  cwru_tour
 //
-//  Created by Heath Hudgins on 3/16/14.
-//  Copyright (c) 2014 Heath Hudgins. All rights reserved.
+//  Created by Sean Corcoran on 3/2/14.
+//  Copyright (c) 2014 Sean Corcoran. All rights reserved.
 //
 
 #import "MissionInfoViewController.h"
@@ -29,7 +29,8 @@
     // Do any additional setup after loading the view.
     //[self.missionTextView setText:info];
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"missionInfo" withExtension:@"html"];
-    [self.missionWebView loadRequest:[NSURLRequest requestWithURL:url]];    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.missionWebView loadRequest:[NSURLRequest requestWithURL:url]];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,16 +38,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

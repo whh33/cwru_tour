@@ -2,7 +2,7 @@
 //  MDDirectionService.m
 //  googleMaps
 //
-//  Created by Eric Vennaro on 3/23/14.
+//  Created by Eric Vennaro on 3/14/14.
 //  This code is based directly from provided documentation in the google api documents
 //  And tutorial section.  Can find sources on the google maps API direction services
 //  Copyright (c) 2014 Eric Vennaro. All rights reserved.
