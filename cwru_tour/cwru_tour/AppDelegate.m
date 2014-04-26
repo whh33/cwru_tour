@@ -148,10 +148,12 @@
         NSManagedObject *newRoute = [[NSManagedObject alloc] initWithEntity:routeEntity insertIntoManagedObjectContext:context];
         
         NSString *routeName = record[0];
-        NSString *waypointBuildings = record[1];
-        NSString *buildingsInRoute = record[2];
+        NSString *time = record[1];
+        NSString *waypointBuildings = record[2];
+        NSString *buildingsInRoute = record[3];
         
         [newRoute setValue:routeName forKey:@"name"];
+        [newRoute setValue:time forKey:@"time"];
         [newRoute setValue:waypointBuildings forKeyPath:@"waypointBuildings"];
         [newRoute setValue:buildingsInRoute forKey:@"buildingsInRoute"];
     }

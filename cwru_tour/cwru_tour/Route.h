@@ -12,6 +12,7 @@
 @interface Route : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * time;
 @property (nonatomic, retain) NSString * waypointBuildings;
 @property (nonatomic, retain) NSString * buildingsInRoute;
 @end

@@ -14,13 +14,16 @@
 
 @interface DisplayTourMapViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
-//@property (strong, nonatomic) GMSMapView *mapView;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (weak, nonatomic) IBOutlet UIWebView *longDescription;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSEntityDescription *routeEntity;
 @property (strong, nonatomic) NSEntityDescription *buildingEntity;
 @property (strong, nonatomic) NSManagedObject * instanceIndividual;
+
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
+@property (weak, nonatomic) IBOutlet UIWebView *longDescription;
+
 - (IBAction)displayAnnotation:(id)sender;
 
 @end

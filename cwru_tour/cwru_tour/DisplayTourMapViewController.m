@@ -38,6 +38,15 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    //set the navigation bar title
+    NSString *routeName = [self.instanceIndividual valueForKey:@"name"];
+    self.navigationBar.title = routeName;
+    
+    //set initial web view text
+    NSString *sampleText = @"<font color=\"white\"><font size=2>Press the \"Go\" button to begin the tour</font></font>";
+    [self.longDescription loadHTMLString:sampleText baseURL:nil];
+    
     //declare core data and local arrays
     self.buildingEntity = [NSEntityDescription entityForName:@"Building" inManagedObjectContext:self.managedObjectContext];
     self.waypoints = [NSMutableArray array];
@@ -173,7 +182,6 @@
                        withSelector:selector
                        withDelegate:self];
     }
-    [self addMapAnnotation];
 }
 
 -(void)addDirections:(NSDictionary *)json{
@@ -238,6 +246,8 @@
         landmarkCount=0;
     }
     if(!firstTime){
+        [self addMapAnnotation];
+        self.nextButton.title = @"Next Sight";
         firstTime = YES;
         Landmark *closestLandmark;
         Landmark *firstLandmarkOnRoute = self.annotationsOnRoute[0];

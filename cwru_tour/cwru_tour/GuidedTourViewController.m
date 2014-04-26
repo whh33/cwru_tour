@@ -193,6 +193,7 @@
     
     Route *object = (Route *) [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = object.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Approximately %@ minutes", object.time];
 }
 
 #pragma mark - Navigation

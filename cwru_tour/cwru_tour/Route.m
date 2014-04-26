@@ -11,6 +11,7 @@
 @implementation Route
 
 @dynamic name;
+@dynamic time;
 @dynamic buildingsInRoute;
 @dynamic waypointBuildings;
 
